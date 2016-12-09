@@ -1,0 +1,10 @@
+{
+	name: "Mon carré potager 2016",
+	creationDate: "",
+	description: "kikoo",
+	box: [
+		plant: "",
+		creationDate: ""
+	]
+
+}

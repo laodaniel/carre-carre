@@ -1,0 +1,68 @@
+{
+  "name": "carre-carre",
+  "version": "1.0.0",
+  "description": "Garden box",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --hot --progress --colors -d"
+  },
+  "author": "Daniel lao",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^2.4.1",
+    "react": "15.4.1",
+    "react-dom": "15.4.1",
+    "redux": "3.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "babel-core": "6.18.2",
+    "babel-eslint": "7.1.1",
+    "babel-loader": "6.2.9",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "html-webpack-plugin": "^2.24.1",
+    "postcss-loader": "^1.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^2.1.0-beta.12"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "mocha": true,
+      "browser": true
+    },
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "comma-dangle": [
+        2,
+        "never"
+      ],
+      "max-len": [
+        2,
+        120,
+        2
+      ],
+      "no-console": 0,
+      "new-cap": 0
+    }
+  }
+}

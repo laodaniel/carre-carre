@@ -1,0 +1,6 @@
+@import "./colors.css";
+
+#main {
+	color: var(--red);
+	background: linear-gradient(to left, rgba(0, 13, 83, 0), rgba(0, 14, 83, 0.5));
+}
