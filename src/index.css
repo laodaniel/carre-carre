@@ -1,6 +1,40 @@
-@import "./colors.css";
+@import "./normalize.css";
+
+:root {
+  --box-size: 400px;
+}
 
 #main {
-	color: var(--red);
-	background: linear-gradient(to left, rgba(0, 13, 83, 0), rgba(0, 14, 83, 0.5));
+}
+
+.plot {
+  width: var(--box-size);
+  height: var(--box-size);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: .5em;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 4px;
+  overflow: auto;
+  min-height: 20em;
+}
+.plant {
+  flex: 1 0 calc(33% - 2px);
+  background: #999;
+  color: #fff;
+  border: 1px solid gray;
+}
+
+.plant:hover {
+  cursor: grab;
+  background: gray;
+}
+
+.plantSelector {
+}
+
+.plantSelector_plant {
+  display: inline;
 }

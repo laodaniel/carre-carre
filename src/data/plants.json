@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "name": "Betteraves",
+    "image": "salad"
+  }, {
+    "id": 2,
+    "name": "Brocoli"
+  }, {
+    "id": 3,
+    "name": "Choux de Bruxelles"
+  }, {
+    "id": 4,
+    "name": "Chou"
+  }, {
+    "id": 5,
+    "name": "Carottes"
+  }, {
+    "id": 6,
+    "name": "Blé"
+  }, {
+    "id": 7,
+    "name": "Concombre"
+  }, {
+    "id": 8,
+    "name": "Fèves"
+  }, {
+    "id": 9,
+    "name": "Chou frisé"
+  }, {
+    "id": 10,
+    "name": "Poireau"
+  }, {
+    "id": 11,
+    "name": "Salade"
+  }, {
+    "id": 12,
+    "name": "Oignon"
+  }, {
+    "id": 13,
+    "name": "Epinards"
+  }, {
+    "id": 14,
+    "name": "Pomme de terre"
+  }, {
+    "id": 15,
+    "name": "Radis"
+  }, {
+    "id": 16,
+    "name": "Tomate"
+  }, {
+    "id": 17,
+    "name": "Navet"
+  }
+]
