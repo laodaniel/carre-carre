@@ -1,17 +1,17 @@
+import { addPlantInPlot } from '../actions/actions';
 import { connect } from 'react-redux';
+import Plant from './Plant';
 import React from 'react';
 import style from '../index.css';
-import { addPlantInPlot } from '../actions/actions';
 
 const PlantSelector = ({ plants, dispatch } = {}) =>
-  <ul className={style.plantSelector}> {
+  <div className={style.plantSelector}> {
     plants.map((plant) =>
-      <li className={style.plantSelector_plant}
-          key={plant.plantId} onClick={ () => dispatch(addPlantInPlot(plant.plantId)) }>
-        {plant.name}
-      </li>
+      <Plant className={style.plantSelector_plant}
+        name={plant.name} image={plant.image} key={plant.plantId}
+        onClick={ () => dispatch(addPlantInPlot(plant.plantId)) }/>
     )}
-  </ul>
+  </div>
 ;
 
 export default connect()(PlantSelector);

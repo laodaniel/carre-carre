@@ -1,8 +1,7 @@
-const autoprefixer = require('autoprefixer');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const pkg = require('./package.json');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 
 const versions = Object.assign({}, pkg.devDependencies, pkg.dependencies);
 module.exports = {
@@ -24,20 +23,16 @@ module.exports = {
           presets: ['es2015', 'stage-0', 'react']
         },
         loader: 'babel-loader'
-      },
-      {
+      }, {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader'
-        ]
-      },
-      {
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader?-autoprefixer&-colormin&modules&importLoaders=1&localIdentName=[name]_[local]!postcss-loader'
+        })
+      }, {
         test: /\.json$/,
         loader: 'json-loader'
-      },
-      {
+      }, {
         test: /\.svg$/,
         loader: 'svg-sprite-loader'
       }
@@ -62,15 +57,7 @@ module.exports = {
     redux: 'Redux'
   },*/
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [
-          autoprefixer({
-            browsers: ['> 1%', 'last 4 versions', 'Firefox ESR', 'not ie < 9']
-          })
-        ]
-      }
-    }),
+    new ExtractTextPlugin('[name].css'),
     new HtmlWebpackPlugin({
       inject: true,
       template: 'src/index.html',

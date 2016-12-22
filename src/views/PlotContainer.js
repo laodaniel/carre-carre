@@ -1,29 +1,16 @@
+import Plant from './Plant.js';
 import React from 'react';
+import style from '../index.css';
 import { connect } from 'react-redux';
 import { removePlantFromPlot } from '../actions/actions';
 
-const Plant = (plant) =>
-  <div className="plant" onClick={ plant.onRemovePlant }>
-    {plant.name}
-    {plant.image &&
-      <svg>
-        <use xlinkHref={plant.image} />
-      </svg>
-    }
-  </div>
-;
-
-Plant.propTypes = {
-  plant: React.PropTypes.object
-};
-
 const Plot = ({plot, plants, removePlantFromPlot} = {}) =>
-  <aside className="plot">
+  <aside className={style.plot}>
     {plot.plants.map((plant, index) => {
       const plantData = plants[plant.plantId];
       return (
         <Plant name={plantData.name} image={plantData.image}
-          key={index} onRemovePlant={ () => removePlantFromPlot(plant.plantId) }/>
+          key={index} onClick={ () => removePlantFromPlot(plant.plantId) }/>
       );
     })
   }

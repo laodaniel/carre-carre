@@ -4,22 +4,20 @@
   --box-size: 400px;
 }
 
-#main {
-}
-
 .plot {
   width: var(--box-size);
   height: var(--box-size);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: .5em;
+  padding: 0.5em;
   background: #fff;
   border: 1px solid #999;
   border-radius: 4px;
   overflow: auto;
   min-height: 20em;
 }
+
 .plant {
   flex: 1 0 calc(33% - 2px);
   background: #999;
@@ -33,6 +31,7 @@
 }
 
 .plantSelector {
+  padding: 10px;
 }
 
 .plantSelector_plant {
