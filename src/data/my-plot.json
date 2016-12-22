@@ -1,7 +1,10 @@
 {
   "name": "Mon carré potager 2016",
   "description": "description",
-  "box": [
+  "plants": [
+    {
+      "plantId": 0
+    },
     {
       "plantId": 1
     },
@@ -25,9 +28,6 @@
     },
     {
       "plantId": 8
-    },
-    {
-      "plantId": 9
     }
   ]
 }

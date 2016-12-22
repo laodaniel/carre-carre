@@ -1,8 +1,10 @@
 const autoprefixer = require('autoprefixer');
 const path = require('path');
+const pkg = require('./package.json');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
+const versions = Object.assign({}, pkg.devDependencies, pkg.dependencies);
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -50,8 +52,15 @@ module.exports = {
   },
   context: __dirname,
   target: 'web',
+  devtool: 'eval',
   devServer: {
   },
+/*  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    'react-redux': 'ReactRedux',
+    redux: 'Redux'
+  },*/
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
@@ -66,7 +75,13 @@ module.exports = {
       inject: true,
       template: 'src/index.html',
       filename: 'index.html',
-      title: 'Carre carre'
+      title: 'Carre carre',
+      vendors: [
+        `//cdnjs.cloudflare.com/ajax/libs/react/${versions.react}/react.min.js`,
+        `//cdnjs.cloudflare.com/ajax/libs/react/${versions['react-dom']}/react-dom.min.js`,
+        `//cdnjs.cloudflare.com/ajax/libs/react-redux/${versions['react-redux']}/react-redux.min.js`,
+        `//cdnjs.cloudflare.com/ajax/libs/redux/${versions.redux}/redux.min.js`,
+      ].map((url) => `<script src="${url}"></script>`).join('\n  ')
     }
   )]
 };

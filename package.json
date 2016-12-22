@@ -5,38 +5,40 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "yarn && webpack-dev-server --inline --hot --progress --colors -d",
-    "prod": "NODE_ENV=production webpack --progress --colors -p"
+    "start": "yarn && webpack-dev-server --inline --hot --progress --colors",
+    "prod": "yarn && webpack --progress --colors -p"
   },
   "author": "Daniel lao",
   "license": "ISC",
   "dependencies": {
-    "core-js": "^2.4.1",
+    "core-js": "2.4.1",
     "react": "15.4.1",
     "react-dom": "15.4.1",
-    "redux": "3.6.0"
+    "react-redux": "5.0.1",
+    "redux": "3.6.0",
+    "redux-thunk": "2.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
-    "babel-core": "6.18.2",
+    "autoprefixer": "6.5.3",
+    "babel-core": "6.20.0",
     "babel-eslint": "7.1.1",
     "babel-loader": "6.2.9",
-    "babel-polyfill": "^6.16.0",
+    "babel-polyfill": "6.16.0",
     "babel-preset-es2015": "6.18.0",
     "babel-preset-react": "6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "css-loader": "^0.26.1",
-    "eslint": "^3.12.2",
-    "eslint-plugin-react": "^6.8.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
-    "html-webpack-plugin": "^2.24.1",
-    "json-loader": "^0.5.4",
-    "postcss-loader": "^1.2.0",
-    "style-loader": "^0.13.1",
-    "svg-sprite-loader": "^0.1.1",
-    "three": "^0.82.1",
-    "webpack": "^2.1.0-beta.27",
-    "webpack-dev-server": "^2.1.0-beta.12"
+    "babel-preset-stage-0": "6.16.0",
+    "css-loader": "0.26.1",
+    "eslint": "3.12.2",
+    "eslint-plugin-react": "6.8.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "html-webpack-plugin": "2.24.1",
+    "json-loader": "0.5.4",
+    "postcss-loader": "1.2.0",
+    "style-loader": "0.13.1",
+    "svg-sprite-loader": "0.1.1",
+    "three": "0.82.1",
+    "webpack": "2.2.0-rc.0",
+    "webpack-dev-server": "2.1.0-beta.12"
   },
   "repository": "git@github.com:laodaniel/carre-carre.git"
 }
