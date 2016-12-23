@@ -1,54 +1,70 @@
 [{
     "plantId": 0,
-    "name": "Navet"
+    "name": "Navet",
+    "image": "salad"
   }, {
     "plantId": 1,
     "name": "Betteraves",
     "image": "salad"
   }, {
     "plantId": 2,
-    "name": "Brocoli"
+    "name": "Brocoli",
+    "image": "salad"
   }, {
     "plantId": 3,
-    "name": "Choux de Bruxelles"
+    "name": "Choux de Bruxelles",
+    "image": "salad"
   }, {
     "plantId": 4,
-    "name": "Chou"
+    "name": "Chou",
+    "image": "salad"
   }, {
     "plantId": 5,
-    "name": "Carottes"
+    "name": "Carottes",
+    "image": "salad"
   }, {
     "plantId": 6,
-    "name": "Blé"
+    "name": "Blé",
+    "image": "salad"
   }, {
     "plantId": 7,
-    "name": "Concombre"
+    "name": "Concombre",
+    "image": "salad"
   }, {
     "plantId": 8,
-    "name": "Fèves"
+    "name": "Fèves",
+    "image": "salad"
   }, {
     "plantId": 9,
-    "name": "Chou frisé"
+    "name": "Chou frisé",
+    "image": "salad"
   }, {
     "plantId": 10,
-    "name": "Poireau"
+    "name": "Poireau",
+    "image": "salad"
   }, {
     "plantId": 11,
-    "name": "Salade"
+    "name": "Salade",
+    "image": "salad"
   }, {
     "plantId": 12,
-    "name": "Oignon"
+    "name": "Oignon",
+    "image": "salad"
   }, {
     "plantId": 13,
-    "name": "Epinards"
+    "name": "Epinards",
+    "image": "salad"
   }, {
     "plantId": 14,
-    "name": "Pomme de terre"
+    "name": "Pomme de terre",
+    "image": "salad"
   }, {
     "plantId": 15,
-    "name": "Radis"
+    "name": "Radis",
+    "image": "salad"
   }, {
     "plantId": 16,
-    "name": "Tomate"
+    "name": "Tomate",
+    "image": "salad"
   }
 ]

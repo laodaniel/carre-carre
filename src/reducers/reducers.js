@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
-import { ADD_PLANT, REMOVE_PLANT, ADD_PLANT_IN_PLOT, REMOVE_PLANT_FROM_PLOT } from '../actions/actions.js';
+import { ADD_PLANT, REMOVE_PLANT, ADD_PLANT_IN_PLOT,
+  REMOVE_PLANT_FROM_PLOT, SET_NAME, SET_DESCRIPTION } from '../actions/actions.js';
 
 const plants = (state = {}, action) => {
   switch (action.type) {
@@ -18,6 +19,10 @@ const plot = (state = {}, action) => {
     return {...state, plants: [ ...state.plants, { plantId: action.plantId } ]};
   case REMOVE_PLANT_FROM_PLOT:
     return {...state, plants: state.plants.filter(plant => plant.plantId !== action.plantId)};
+  case SET_NAME:
+    return {...state, name: action.name};
+  case SET_DESCRIPTION:
+    return {...state, description: action.description};
   default:
     return state;
   }

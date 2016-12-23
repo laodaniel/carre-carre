@@ -10,7 +10,7 @@ const Plot = ({plot, plants, removePlantFromPlot} = {}) =>
       const plantData = plants[plant.plantId];
       return (
         <Plant name={plantData.name} image={plantData.image}
-          key={index} onClick={ () => removePlantFromPlot(plant.plantId) }/>
+          key={index} onRemove={ () => removePlantFromPlot(plant.plantId) }/>
       );
     })
   }

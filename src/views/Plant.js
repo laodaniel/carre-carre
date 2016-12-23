@@ -2,13 +2,17 @@ import React from 'react';
 import style from '../index.css';
 
 const Plant = (plant) =>
-  <div className={style.plant} onClick={ plant.onClick }>
-    {plant.name}
+  <div className={style.plant} onClick={ plant.onClick } style={{...plant.style}}>
+    {plant.onRemove &&
+      <div className={style.plant_remove}
+        onClick={ plant.onRemove }>x</div>
+    }
     {plant.image &&
-      <svg>
-        <use xlinkHref={plant.image} />
+      <svg className={style.plant_image}>
+        <use xlinkHref={`#${plant.image}`} />
       </svg>
     }
+    <span className={style.plant_name}>{plant.name}</span>
   </div>
 ;
 

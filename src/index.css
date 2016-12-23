@@ -4,10 +4,31 @@
   --box-size: 400px;
 }
 
+.container {
+  padding: 10px;
+}
+
+.header {
+  text-align: center;
+}
+
+.title,
+.description {
+  color: gray;
+  margin: 5px;
+  cursor: text;
+}
+
+.description {
+  font-size: 11pt;
+  font-weight: 300;
+}
+
 .plot {
+  display: flex;
   width: var(--box-size);
   height: var(--box-size);
-  display: flex;
+  margin: auto;
   flex-flow: row wrap;
   justify-content: space-between;
   padding: 0.5em;
@@ -19,10 +40,14 @@
 }
 
 .plant {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1 0 calc(33% - 2px);
   background: #999;
-  color: #fff;
   border: 1px solid gray;
+  align-items: center;
+  text-align: center;
 }
 
 .plant:hover {
@@ -30,10 +55,30 @@
   background: gray;
 }
 
-.plantSelector {
-  padding: 10px;
+.plant_image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  fill: white;
+  margin: auto;
 }
 
-.plantSelector_plant {
-  display: inline;
+.plant_name {
+  color: white;
+}
+
+.plant_remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+}
+
+.plant_remove:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.plantSelector {
+  padding: 10px;
 }

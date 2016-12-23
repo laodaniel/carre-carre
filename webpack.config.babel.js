@@ -5,7 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const versions = Object.assign({}, pkg.devDependencies, pkg.dependencies);
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'plot':'./src/index.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
@@ -63,12 +65,12 @@ module.exports = {
       template: 'src/index.html',
       filename: 'index.html',
       title: 'Carre carre',
-      vendors: [
+      /*vendors: [
         `//cdnjs.cloudflare.com/ajax/libs/react/${versions.react}/react.min.js`,
         `//cdnjs.cloudflare.com/ajax/libs/react/${versions['react-dom']}/react-dom.min.js`,
         `//cdnjs.cloudflare.com/ajax/libs/react-redux/${versions['react-redux']}/react-redux.min.js`,
         `//cdnjs.cloudflare.com/ajax/libs/redux/${versions.redux}/redux.min.js`,
-      ].map((url) => `<script src="${url}"></script>`).join('\n  ')
+      ].map((url) => `<script src="${url}"></script>`).join('\n  ')*/
     }
   )]
 };
