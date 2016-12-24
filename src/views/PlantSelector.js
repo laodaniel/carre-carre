@@ -7,10 +7,10 @@ import style from '../index.css';
 const PlantSelector = ({ plants, dispatch } = {}) =>
   <div className={style.plantSelector}>
     <h3>Add plant:</h3>
-    {plants.map((plant) =>
+    {plants.map((plant, index) =>
       <Plant style={{display: 'inline-block'}}
-        name={plant.name} image={plant.image} key={plant.plantId}
-        onClick={ () => dispatch(addPlantInPlot(plant.plantId)) }/>
+        name={plant.name} image={plant.image} key={`${plant.key}-${index}`}
+        onClick={ () => dispatch(addPlantInPlot(plant.key)) }/>
     )}
   </div>
 ;

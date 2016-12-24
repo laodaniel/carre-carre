@@ -7,10 +7,10 @@ import { removePlantFromPlot } from '../actions/actions';
 const Plot = ({plot, plants, removePlantFromPlot} = {}) =>
   <aside className={style.plot}>
     {plot.plants.map((plant, index) => {
-      const plantData = plants[plant.plantId];
+      const plantData = plants[plants.map((p) => p.key).indexOf(plant.key)];
       return (
         <Plant name={plantData.name} image={plantData.image}
-          key={index} onRemove={ () => removePlantFromPlot(plant.plantId) }/>
+          key={index} onRemove={ () => removePlantFromPlot(plant.key) }/>
       );
     })
   }

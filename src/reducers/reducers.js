@@ -16,9 +16,9 @@ const plants = (state = {}, action) => {
 const plot = (state = {}, action) => {
   switch (action.type) {
   case ADD_PLANT_IN_PLOT:
-    return {...state, plants: [ ...state.plants, { plantId: action.plantId } ]};
+    return {...state, plants: [ ...state.plants, { key: action.key } ]};
   case REMOVE_PLANT_FROM_PLOT:
-    return {...state, plants: state.plants.filter(plant => plant.plantId !== action.plantId)};
+    return {...state, plants: state.plants.filter(plant => plant.key !== action.key)};
   case SET_NAME:
     return {...state, name: action.name};
   case SET_DESCRIPTION:

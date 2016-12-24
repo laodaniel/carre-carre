@@ -13,12 +13,12 @@ export function removePlant(plantId) {
   return { type: REMOVE_PLANT, plantId };
 }
 
-export function addPlantInPlot(plantId) {
-  return { type: ADD_PLANT_IN_PLOT, plantId };
+export function addPlantInPlot(key) {
+  return { type: ADD_PLANT_IN_PLOT, key };
 }
 
-export function removePlantFromPlot(plantId) {
-  return { type: REMOVE_PLANT_FROM_PLOT, plantId };
+export function removePlantFromPlot(key) {
+  return { type: REMOVE_PLANT_FROM_PLOT, key };
 }
 
 export function setName(name) {
