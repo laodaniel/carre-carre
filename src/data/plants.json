@@ -1,70 +1,272 @@
-[{
-    "plantId": 0,
-    "name": "Navet",
-    "image": "salad"
-  }, {
-    "plantId": 1,
-    "name": "Betteraves",
-    "image": "salad"
-  }, {
-    "plantId": 2,
-    "name": "Brocoli",
-    "image": "salad"
-  }, {
-    "plantId": 3,
-    "name": "Choux de Bruxelles",
-    "image": "salad"
-  }, {
-    "plantId": 4,
-    "name": "Chou",
-    "image": "salad"
-  }, {
-    "plantId": 5,
-    "name": "Carottes",
-    "image": "salad"
-  }, {
-    "plantId": 6,
-    "name": "Blé",
-    "image": "salad"
-  }, {
-    "plantId": 7,
-    "name": "Concombre",
-    "image": "salad"
-  }, {
-    "plantId": 8,
-    "name": "Fèves",
-    "image": "salad"
-  }, {
-    "plantId": 9,
-    "name": "Chou frisé",
-    "image": "salad"
-  }, {
-    "plantId": 10,
-    "name": "Poireau",
-    "image": "salad"
-  }, {
-    "plantId": 11,
-    "name": "Salade",
-    "image": "salad"
-  }, {
-    "plantId": 12,
-    "name": "Oignon",
-    "image": "salad"
-  }, {
-    "plantId": 13,
-    "name": "Epinards",
-    "image": "salad"
-  }, {
-    "plantId": 14,
-    "name": "Pomme de terre",
-    "image": "salad"
-  }, {
-    "plantId": 15,
-    "name": "Radis",
-    "image": "salad"
-  }, {
-    "plantId": 16,
-    "name": "Tomate",
-    "image": "salad"
-  }
-]
+{
+  "plantFamilies": [
+    {
+      "name": "Alliaceae"
+    }, {
+      "name": "Apiaceae"
+    }, {
+      "name": "Asteraceae"
+    }, {
+      "name": "Brassicaceae"
+    }, {
+      "name": "Chenopodiaceae"
+    }, {
+      "name": "Cucurbitaceae"
+    }, {
+      "name": "Fabaceae"
+    }, {
+      "name": "Solanaceae"
+    }, {
+      "name": "valerianaceae"
+    }, {
+      "name": "poaceae"
+    }, {
+      "name": "polygonaceae‎"
+    }
+  ],
+  "plants": [
+    {
+      "key": "garlic",
+      "name": "Ail",
+      "plantFamilies": "alliaceae",
+      "goodCompanions": ["carrot", "beet", "lettuce"]
+    }, {
+      "key": "bean",
+      "name": "Haricot",
+      "plantFamilies": "fabaceae",
+      "goodCompanions": ["carrot", "radish"]
+    }, {
+      "key": "artichoke",
+      "name": "Artichaut",
+      "plantFamilies": "asteraceae",
+      "goodCompanions": ["cabbage", "salad", "asparagus"]
+    }, {
+      "key": "cabbage",
+      "name": "Chou",
+      "varieties": [
+        {
+          "key": "broccoli",
+          "name": "Brocoli",
+          "plantFamilies": "brassicaceae",
+          "goodCompanions": ["celery", "carrot"]
+        }, {
+          "key": "brusselsSprouts",
+          "name": "Chou de Bruxelles",
+          "plantFamilies": "brassicaceae",
+          "goodCompanions": ["lettuce", "spinach"]
+        }, {
+          "key": "kale",
+          "name": "Chou frisé",
+          "plantFamilies": "brassicaceae",
+          "goodCompanions": ["bean", "celery"]
+        }, {
+          "key": "headCabbage",
+          "name": "Chou pommé",
+          "plantFamilies": "brassicaceae",
+          "goodCompanions": ["lettuce", "pea", "tomato"]
+        }, {
+          "key": "cauliflower",
+          "name": "Chou fleur",
+          "plantFamilies": "brassicaceae",
+          "goodCompanions": ["bean", "celery", "oregano", "pea", "tomato"]
+        }
+      ]
+    }, {
+      "key": "celery",
+      "name": "Céleri",
+      "varieties": [
+        {
+          "key": "celery",
+          "name": "Céléri-branche",
+          "plantFamilies": "apiaceae",
+          "goodCompanions": ["pea", "onion", "tomato"]
+        },
+        {
+          "key":"celeriac",
+          "name": "Céleri-rave",
+          "plantFamilies": "apiaceae",
+          "goodCompanions": ["leek", "beet", "cabbage"]
+        }
+      ]
+    }, {
+      "key": "eggplant",
+      "name": "Aubergine",
+      "plantFamilies": "solanaceae",
+      "goodCompanions": ["lettuce", "radish"]
+    }, {
+      "key": "beet",
+      "name": "Betteraves",
+      "plantFamilies": "chenopodiaceae",
+      "goodCompanions": ["cabbage", "celery", "garlic"]
+    }, {
+      "key": "carrot",
+      "name": "Carotte",
+      "plantFamilies": "apiaceae",
+      "goodCompanions": ["onion", "garlic", "pea", "lettuce", "dill", "carnationOfIndia", "leek"]
+    }, {
+      "key": "salad",
+      "name": "Salade",
+      "varieties": [
+        {
+          "key": "lettuce",
+          "name": "Laitue",
+          "plantFamilies": "asteraceae",
+          "goodCompanions": ["carrot", "radish", "bean"]
+        }, {
+          "key": "chicory",
+          "name": "Chicorée frisée",
+          "plantFamilies": "asteraceae",
+          "goodCompanions": ["cauliflower"]
+        }, {
+          "key": "endive",
+          "name": "Scarole",
+          "plantFamilies": "asteraceae",
+          "goodCompanions": ["cauliflower"]
+        }, {
+          "key": "cornSalad",
+          "name": "Mâche",
+          "plantFamilies": "valerianaceae",
+          "goodCompanions": ["leek"]
+        }
+      ]
+    }, {
+      "key": "cucumber",
+      "name": "Concombre",
+      "plantFamilies": "cucurbitaceae",
+      "goodCompanions": ["bean", "celery", "carrot"]
+    }, {
+      "key": "cucurbita",
+      "name": "Courge",
+      "plantFamilies": "cucurbitaceae",
+      "goodCompanions": ["corn", "bean"]
+    }, {
+      "key": "zucchini",
+      "name": "Courgette",
+      "plantFamilies": "cucurbitaceae",
+      "goodCompanions": ["corn", "bean"]
+    }, {
+      "key": "shallot",
+      "name": "Echalote",
+      "plantFamilies": "alliaceae",
+      "goodCompanions": ["leek", "lettuce"]
+    }, {
+      "key": "spinach",
+      "name": "Epinard",
+      "plantFamilies": "chenopodiaceae",
+      "goodCompanions": ["bean", "carrot"]
+    }, {
+      "key": "fennel",
+      "name": "Fenouil bulbeux",
+      "plantFamilies": "apiaceae",
+      "goodCompanions": ["leek"]
+    }, {
+      "key": "corn",
+      "name": "Maïs",
+      "plantFamilies": "poaceae",
+      "goodCompanions": ["bean"]
+    }, {
+      "key": "melon",
+      "name": "Melon",
+      "plantFamilies": "cucurbitaceae",
+      "goodCompanions": ["lettuce", "bean"]
+    }, {
+      "key": "turnip",
+      "name": "Navet",
+      "plantFamilies": "brassicaceae",
+      "goodCompanions": ["lettuce", "spinach", "fennel"]
+    }, {
+      "key": "onion",
+      "name": "Oignon",
+      "plantFamilies": "alliaceae",
+      "goodCompanions": ["carrot", "lettuce", "cucumber", "tomato"]
+    }, {
+      "key": "sorrel",
+      "name": "Oseille",
+      "plantFamilies": "polygonaceae‎",
+      "goodCompanions": ["radish", "parsley"]
+    }, {
+      "key": "watermelon",
+      "name": "Pastèque",
+      "plantFamilies": "cucurbitaceae"
+    }, {
+      "key": "leek",
+      "name": "Poireau",
+      "plantFamilies": "alliaceae",
+      "goodCompanions": ["celery", "salsify", "fennel"]
+    }, {
+      "key": "chard",
+      "name": "Blette",
+      "plantFamilies": "chenopodiaceae",
+      "goodCompanions": ["onion", "turnip"]
+    }, {
+      "key": "pea",
+      "name": "Pois",
+      "plantFamilies": "fabaceae",
+      "goodCompanions": ["cabbage", "radish", "carrot"]
+    }, {
+      "key": "chickpea",
+      "name": "Pois chiche",
+      "plantFamilies": "fabaceae",
+      "goodCompanions": ["cucumber"]
+    }, {
+      "key": "pepper",
+      "name": "Poivron",
+      "plantFamilies": "solanaceae",
+      "goodCompanions": ["tomato", "eggplant"]
+    }, {
+      "key": "potato",
+      "name": "Pomme de terre",
+      "plantFamilies": "solanaceae",
+      "goodCompanions": ["cabbage", "bean"]
+    }, {
+      "key": "pumpkin",
+      "name": "Potiron",
+      "plantFamilies": "cucurbitaceae",
+      "goodCompanions": ["corn", "bean"]
+    }, {
+      "key": "radish",
+      "name": "Radis",
+      "plantFamilies": "brassicaceae",
+      "goodCompanions": ["carrot", "lettuce", "strawberriesTree"]
+    }, {
+      "key": "rhubarb",
+      "name": "Rhubarbe",
+      "plantFamilies": "polygonaceae‎"
+    }, {
+      "key": "salsify",
+      "name": "Salsifis",
+      "plantFamilies": "asteraceae",
+      "goodCompanions": ["leek", "carrot"]
+    }, {
+      "key": "tomato",
+      "name": "Tomate",
+      "plantFamilies": "solanaceae",
+      "goodCompanions": ["garlic", "onion", "spinach", "basil", "carnationOfIndia"]
+    },
+
+
+    {
+      "key": "basil",
+      "name": "Basilic"
+    },
+    {
+      "key": "strawberriesTree",
+      "name": "Fraisier"
+    }, {
+      "key": "parsley",
+      "name": "Persil"
+    }, {
+      "key": "oregano",
+      "name": "Origan"
+    }, {
+      "key": "dill",
+      "name": "Aneth"
+    },{
+      "key": "carnationOfIndia",
+      "name": "Oeillet d'inde"
+    }, {
+      "key": "asparagus",
+      "name": "Asperge"
+    }
+  ]
+}
