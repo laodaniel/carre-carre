@@ -18,7 +18,10 @@ const plot = (state = {}, action) => {
   case ADD_PLANT_IN_PLOT:
     return {...state, plants: [ ...state.plants, { key: action.key } ]};
   case REMOVE_PLANT_FROM_PLOT:
-    return {...state, plants: state.plants.filter(plant => plant.key !== action.key)};
+    return {...state, plants: [
+      ...state.plants.slice(0, action.index),
+      ...state.plants.slice(action.index + 1)]
+    };
   case SET_NAME:
     return {...state, name: action.name};
   case SET_DESCRIPTION:

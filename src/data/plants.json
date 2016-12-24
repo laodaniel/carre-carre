@@ -90,6 +90,7 @@
   }, {
     "key": "salad",
     "name": "Salade",
+    "image": "salad",
     "varieties": [
       {
         "key": "lettuce",

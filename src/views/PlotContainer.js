@@ -10,7 +10,7 @@ const Plot = ({plot, plants, removePlantFromPlot} = {}) =>
       const plantData = plants[plants.map((p) => p.key).indexOf(plant.key)];
       return (
         <Plant name={plantData.name} image={plantData.image}
-          key={index} onRemove={ () => removePlantFromPlot(plant.key) }/>
+          key={`${plant.key}-${index}`} onRemove={ () => removePlantFromPlot(index) }/>
       );
     })
   }

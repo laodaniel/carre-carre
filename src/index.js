@@ -1,8 +1,8 @@
-import './assets/salad.svg';
 import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
+import './assets/assets.js';
 import Header from './views/Header';
 import plants from './data/plants.json';
 import PlantSelector from './views/PlantSelector';

@@ -7,11 +7,9 @@ const Plant = (plant) =>
       <div className={style.plant_remove}
         onClick={ plant.onRemove }>x</div>
     }
-    {plant.image &&
-      <svg className={style.plant_image}>
-        <use xlinkHref={`#${plant.image}`} />
-      </svg>
-    }
+    <svg className={style.plant_image}>
+      <use xlinkHref={plant.image ? `#${plant.image}` : '#default-plant'} />
+    </svg>
     <span className={style.plant_name}>{plant.name}</span>
   </div>
 ;

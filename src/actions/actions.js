@@ -17,8 +17,8 @@ export function addPlantInPlot(key) {
   return { type: ADD_PLANT_IN_PLOT, key };
 }
 
-export function removePlantFromPlot(key) {
-  return { type: REMOVE_PLANT_FROM_PLOT, key };
+export function removePlantFromPlot(index) {
+  return { type: REMOVE_PLANT_FROM_PLOT, index };
 }
 
 export function setName(name) {
