@@ -6,14 +6,22 @@ import { removePlantFromPlot } from '../actions/actions';
 
 const Plot = ({plot, plants, removePlantFromPlot} = {}) =>
   <aside className={style.plot}>
-    {plot.plants.map((plant, index) => {
-      const plantData = plants[plants.map((p) => p.key).indexOf(plant.key)];
+    { [...Array(plot.slots).keys()].map((slot, index) => {
+      let plantData;
+      const plantIndex = plot.plants.map((p) => p.slot).indexOf(index);
+      if (plantIndex > -1) {
+        plantData = plants[plants.map((p) => p.key).indexOf(plot.plants[plantIndex].key)];
+      }
       return (
-        <Plant name={plantData.name} image={plantData.image}
-          key={`${plant.key}-${index}`} onRemove={ () => removePlantFromPlot(index) }/>
+        <div key={ index } className={style.slot}>
+          { plantData &&
+            <Plant name={plantData.name} image={plantData.image}
+              onRemove={ () => removePlantFromPlot(plantIndex) }/>
+          }
+        </div>
       );
     })
-  }
+    }
   </aside>
 ;
 
@@ -21,7 +29,7 @@ const mapStateToProps = (state) => {
   return state;
 };
 
-const mapDispatchToProps =  ({
+const mapDispatchToProps = ({
   removePlantFromPlot
 });
 

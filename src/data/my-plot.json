@@ -1,17 +1,23 @@
 {
   "name": "Mon carré potager 2016",
   "description": "Optimize my plot!",
+  "slots": 9,
   "plants": [
     {
-      "key": "garlic"
+      "key": "garlic",
+      "slot": 1
     }, {
-      "key": "eggplant"
+      "key": "eggplant",
+      "slot": 3
     }, {
-      "key": "carrot"
+      "key": "carrot",
+      "slot": 6
     }, {
-      "key": "beet"
+      "key": "beet",
+      "slot": 2
     }, {
-      "key": "cucumber"
+      "key": "cucumber",
+      "slot": 7
     }
   ]
 }

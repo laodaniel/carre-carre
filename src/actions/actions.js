@@ -13,8 +13,8 @@ export function removePlant(plantId) {
   return { type: REMOVE_PLANT, plantId };
 }
 
-export function addPlantInPlot(key) {
-  return { type: ADD_PLANT_IN_PLOT, key };
+export function addPlantInPlot(key, slot) {
+  return { type: ADD_PLANT_IN_PLOT, key, slot };
 }
 
 export function removePlantFromPlot(index) {

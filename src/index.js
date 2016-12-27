@@ -20,7 +20,7 @@ const App = () =>
     <section className={style.container}>
       <Header plot={state.plot}/>
       <PlotContainer/>
-      <PlantSelector plants={state.plants}/>
+      <PlantSelector/>
     </section>
   </Provider>;
 
