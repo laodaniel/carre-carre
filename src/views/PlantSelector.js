@@ -8,9 +8,9 @@ const PlantSelector = ({ plants, plot, addPlantInPlot } = {}) =>
   <div className={style.plantSelector}>
     <h3>Add plant:</h3>
     {plants.map((plant, index) =>
-      <Plant style={{display: 'inline-block', width: 'initial'}}
+      <Plant inlineStyle={{display: 'inline-block', width: 'initial'}}
         name={plant.name} image={plant.image} key={`${plant.key}-${index}`}
-        onClick={ () => { addPlantInPlot(plant.key, plot); }
+        onAdd={ () => { addPlantInPlot(plant.key, plot); }
         }/>
     )}
   </div>

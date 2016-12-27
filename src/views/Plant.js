@@ -1,21 +1,36 @@
+import { DragSource } from 'react-dnd';
 import React from 'react';
 import style from '../index.css';
 
-const Plant = (plant) =>
-  <div className={style.plant} onClick={ plant.onClick } style={{...plant.style}}>
-    {plant.onRemove &&
+const plantSource = {
+  beginDrag() {
+    return {};
+  }
+};
+
+function collect(connect, monitor) {
+  return {
+    connectDragSource: connect.dragSource(),
+    isDragging: monitor.isDragging()
+  };
+}
+
+const Plant = ({ isDragging, connectDragSource, onAdd, onRemove, image, inlineStyle, name}) =>
+  connectDragSource(<div className={style.plant} onClick={ onAdd } style={{...inlineStyle}}>
+    {onRemove &&
       <div className={style.plant_remove}
-        onClick={ plant.onRemove }>x</div>
+        onClick={ onRemove }>x</div>
     }
     <svg className={style.plant_image}>
-      <use xlinkHref={plant.image ? `#${plant.image}` : '#default-plant'} />
+      <use xlinkHref={image ? `#${image}` : '#default-plant'} />
     </svg>
-    <span className={style.plant_name}>{plant.name}</span>
-  </div>
+    <span style={{ opacity: isDragging ? 0.5 : 1 }} className={style.plant_name}>{name}</span>
+  </div>)
 ;
 
 Plant.propTypes = {
-  plant: React.PropTypes.object
+  isDragging: React.PropTypes.bool.isRequired,
+  connectDragSource: React.PropTypes.func.isRequired
 };
 
-export default Plant;
+export default DragSource('PLANT', plantSource, collect)(Plant);
