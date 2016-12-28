@@ -25,10 +25,8 @@ const mapStateToProps = (state) => {
   return state;
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  addPlant: (plantKey, index) => {
-    dispatch(addPlant(plantKey, index));
-  }
+const mapDispatchToProps = ({
+  addPlant
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlantSelector);

@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import style from '../index.css';
 
 const slotDropTarget = {
-  canDrop() {
-    return true;
+  canDrop(props) {
+    return typeof props.children === 'undefined';
   },
 
   drop(props) {
@@ -26,7 +26,7 @@ function collect(connect, monitor) {
 class Slot extends Component {
   render() {
     return this.props.connectDropTarget(
-      <div className={style.slot}>
+      <div className={this.props.isOver &&  this.props.canDrop ? style.slotOver : style.slot}>
         { this.props.children }
       </div>
     );
@@ -34,6 +34,8 @@ class Slot extends Component {
 }
 
 Slot.propTypes = {
+  canDrop: React.PropTypes.bool,
+  isOver: React.PropTypes.bool,
   children: React.PropTypes.object,
   connectDropTarget: React.PropTypes.func
 };
