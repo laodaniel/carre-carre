@@ -1,10 +1,11 @@
-import Plant from './Plant.js';
+import Plant from './Plant';
 import React from 'react';
+import Slot from './Slot';
 import style from '../index.css';
 import { connect } from 'react-redux';
-import { removePlantFromPlot } from '../actions/actions';
+import { addPlant, removePlant } from '../actions/actions';
 
-const Plot = ({plot, plants, removePlantFromPlot} = {}) =>
+const Plot = ({plot, plants, addPlant, removePlant} = {}) =>
   <aside className={style.plot}>
     { [...Array(plot.slots).keys()].map((slot, index) => {
       let plantData;
@@ -13,12 +14,13 @@ const Plot = ({plot, plants, removePlantFromPlot} = {}) =>
         plantData = plants[plants.map((p) => p.key).indexOf(plot.plants[plantIndex].key)];
       }
       return (
-        <div key={ index } className={style.slot}>
+        <Slot key={ index } index={ index }>
           { plantData &&
             <Plant name={plantData.name} image={plantData.image}
-              onRemove={ () => removePlantFromPlot(plantIndex) }/>
+              addPlant={ (index) => addPlant(plantData.key, index) }
+              removePlant={ () => removePlant(plantIndex) }/>
           }
-        </div>
+        </Slot>
       );
     })
     }
@@ -30,7 +32,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = ({
-  removePlantFromPlot
+  removePlant,
+  addPlant
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Plot);

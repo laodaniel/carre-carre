@@ -1,17 +1,22 @@
-import { addPlantInPlot } from '../actions/actions';
+import { addPlant } from '../actions/actions';
 import { connect } from 'react-redux';
 import Plant from './Plant';
 import React from 'react';
 import style from '../index.css';
 
-const PlantSelector = ({ plants, plot, addPlantInPlot } = {}) =>
+const freeSlot = (plot) => {
+  const freeSlots = [...Array(plot.slots).keys()].reduce((acc, id) =>
+    plot.plants.map(p => p.slot).indexOf(id) === -1 ? [...acc, id] : acc, []);
+  return typeof freeSlots[0] === 'number' ? freeSlots[0] : -1;
+};
+
+const PlantSelector = ({ plants, plot, addPlant } = {}) =>
   <div className={style.plantSelector}>
     <h3>Add plant:</h3>
     {plants.map((plant, index) =>
       <Plant inlineStyle={{display: 'inline-block', width: 'initial'}}
         name={plant.name} image={plant.image} key={`${plant.key}-${index}`}
-        onAdd={ () => { addPlantInPlot(plant.key, plot); }
-        }/>
+        addPlant={ (index) => addPlant(plant.key, isNaN(index) ? freeSlot(plot) : index) } />
     )}
   </div>
 ;
@@ -21,13 +26,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  addPlantInPlot: (plantKey, plot) => {
-    const slots = [...Array(plot.slots).keys()];
-    const availableSlots = slots.reduce((acc, id) =>
-      plot.plants.map(p => p.slot).indexOf(id) === -1 ? [...acc, id] : acc, []);
-    if (availableSlots.length > 0) {
-      dispatch(addPlantInPlot(plantKey, availableSlots[0]));
-    }
+  addPlant: (plantKey, index) => {
+    dispatch(addPlant(plantKey, index));
   }
 });
 
