@@ -16,7 +16,7 @@ const Plot = ({plot, plants, addPlant, removePlant} = {}) =>
       return (
         <Slot key={ index } index={ index }>
           { plantData &&
-            <Plant name={plantData.name} image={plantData.image}
+            <Plant plant={plantData}
               addPlant={ (index) => addPlant(plantData.key, index) }
               removePlant={ () => removePlant(plantIndex) }/>
           }

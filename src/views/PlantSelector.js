@@ -1,7 +1,7 @@
 import { addPlant } from '../actions/actions';
 import { connect } from 'react-redux';
 import Plant from './Plant';
-import React from 'react';
+import React, { Component } from 'react';
 import style from '../index.css';
 
 const freeSlot = (plot) => {
@@ -10,16 +10,54 @@ const freeSlot = (plot) => {
   return typeof freeSlots[0] === 'number' ? freeSlots[0] : -1;
 };
 
-const PlantSelector = ({ plants, plot, addPlant } = {}) =>
-  <div className={style.plantSelector}>
-    <h3>Add plant:</h3>
-    {plants.map((plant, index) =>
-      <Plant inlineStyle={{display: 'inline-block', width: 'initial'}}
-        name={plant.name} image={plant.image} key={`${plant.key}-${index}`}
-        addPlant={ (index) => addPlant(plant.key, isNaN(index) ? freeSlot(plot) : index) } />
-    )}
-  </div>
-;
+class PlantSelector extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedPlant: undefined
+    };
+  }
+
+  setSelectedPlant(plant) {
+    this.setState({selectedPlant: plant });
+  }
+
+  isCompanion(plantKey) {
+    if (this.state.selectedPlant && this.state.selectedPlant.companions) {
+      return this.state.selectedPlant.companions.indexOf(plantKey) > -1;
+    }
+  }
+
+  isAntagonist(plantKey) {
+    if (this.state.selectedPlant && this.state.selectedPlant.antagonists) {
+      return this.state.selectedPlant.antagonists.indexOf(plantKey) > -1;
+    }
+  }
+
+  render() {
+    const { plants, plot, addPlant } = this.props;
+    return (
+      <div className={style.plantSelector}>
+        <h3>Add plant:</h3>
+        {plants.map((plant, index) =>
+          <Plant inlineStyle={{display: 'inline-block', width: 'initial'}}
+            plant={plant} key={`${plant.key}-${index}`}
+            addPlant={ (index) => addPlant(plant.key, isNaN(index) ? freeSlot(plot) : index) }
+            isCompanion={ this.isCompanion(plant.key) }
+            isAntagonist={ this.isAntagonist(plant.key) }
+            handleMouseEnter={ (plant) => this.setSelectedPlant(plant) }/>
+        )}
+      </div>
+    );
+  }
+}
+
+PlantSelector.propTypes = {
+  plants: React.PropTypes.array,
+  plot: React.PropTypes.object,
+  addPlant: React.PropTypes.func
+};
 
 const mapStateToProps = (state) => {
   return state;
