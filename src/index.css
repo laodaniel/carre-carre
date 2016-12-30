@@ -69,6 +69,18 @@
   background: gray;
 }
 
+.plant_companion {
+  border: green 1px solid;
+}
+
+.plant_antagonist {
+  border: red 1px solid;
+}
+
+.plant_isDragging {
+  opacity: 0.5;
+}
+
 .plant_image {
   display: block;
   width: 50px;
@@ -79,6 +91,7 @@
 
 .plant_name {
   color: white;
+  padding: 0 5px;
 }
 
 .plant_remove {
@@ -96,4 +109,19 @@
 .plantSelector {
   padding: 10px;
   background-color: lightgray;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.details_title {
+  text-align: center;
+}
+
+.details_family::first-letter {
+  text-transform: uppercase;
 }

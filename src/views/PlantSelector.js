@@ -19,8 +19,8 @@ class PlantSelector extends Component {
     };
   }
 
-  setSelectedPlant(plant) {
-    this.setState({selectedPlant: plant });
+  setSelectedPlant(selectedPlant) {
+    this.setState({ selectedPlant });
   }
 
   isCompanion(plantKey) {
@@ -38,7 +38,7 @@ class PlantSelector extends Component {
   render() {
     const { plants, plot, addPlant } = this.props;
     return (
-      <div className={style.plantSelector}>
+      <aside className={style.plantSelector}>
         <h3>Add plant:</h3>
         {plants.map((plant, index) =>
           <Plant inlineStyle={{display: 'inline-block', width: 'initial'}}
@@ -46,9 +46,9 @@ class PlantSelector extends Component {
             addPlant={ (index) => addPlant(plant.key, isNaN(index) ? freeSlot(plot) : index) }
             isCompanion={ this.isCompanion(plant.key) }
             isAntagonist={ this.isAntagonist(plant.key) }
-            handleMouseEnter={ (plant) => this.setSelectedPlant(plant) }/>
+            setSelectedPlant={ (plant) => this.setSelectedPlant(plant) } />
         )}
-      </div>
+      </aside>
     );
   }
 }

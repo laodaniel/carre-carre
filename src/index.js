@@ -7,6 +7,7 @@ import { render } from 'react-dom';
 import Header from './views/Header';
 import HTML5Backend from 'react-dnd-html5-backend';
 import plants from './data/plants.json';
+import PlantDetails from './views/PlantDetails';
 import PlantSelector from './views/PlantSelector';
 import plot from './data/my-plot.json';
 import PlotContainer from './views/PlotContainer';
@@ -19,14 +20,27 @@ let store = createStore(reducer, initialState);
 const state = store.getState();
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedPlant: undefined
+    };
+  }
+
+  setSelectedPlant(selectedPlant) {
+    this.setState({ selectedPlant });
+  }
+
   render() {
     return(
       <Provider store={store}>
-        <section className={style.container}>
+        <div className={style.container}>
           <Header plot={state.plot}/>
-          <PlotContainer/>
+          <PlotContainer setSelectedPlant={ (plant) => this.setSelectedPlant(plant) } />
           <PlantSelector/>
-        </section>
+          { this.state.selectedPlant && <PlantDetails plant={ this.state.selectedPlant }/> }
+        </div>
       </Provider>
     );
   }

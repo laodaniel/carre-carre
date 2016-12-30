@@ -5,8 +5,8 @@ import style from '../index.css';
 import { connect } from 'react-redux';
 import { addPlant, removePlant } from '../actions/actions';
 
-const Plot = ({plot, plants, addPlant, removePlant} = {}) =>
-  <aside className={style.plot}>
+const Plot = ({plot, plants, addPlant, removePlant, setSelectedPlant } = {}) =>
+  <section className={style.plot}>
     { [...Array(plot.slots).keys()].map((slot, index) => {
       let plantData;
       const plantIndex = plot.plants.map((p) => p.slot).indexOf(index);
@@ -18,13 +18,14 @@ const Plot = ({plot, plants, addPlant, removePlant} = {}) =>
           { plantData &&
             <Plant plant={plantData}
               addPlant={ (index) => addPlant(plantData.key, index) }
-              removePlant={ () => removePlant(plantIndex) }/>
+              removePlant={ () => removePlant(plantIndex) }
+              setSelectedPlant={ setSelectedPlant }/>
           }
         </Slot>
       );
     })
     }
-  </aside>
+  </section>
 ;
 
 const mapStateToProps = (state) => {

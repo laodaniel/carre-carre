@@ -1,4 +1,5 @@
 import { DragSource } from 'react-dnd';
+import classnames from 'classnames';
 import ItemTypes from './ItemTypes';
 import React from 'react';
 import style from '../index.css';
@@ -26,11 +27,15 @@ function collect(connect, monitor) {
   };
 }
 
-const Plant = ({ isDragging, connectDragSource, addPlant, removePlant,
-  plant, handleMouseEnter, inlineStyle, isCompanion, isAntagonist }) =>
+const Plant = ({ isDragging, connectDragSource, removePlant,
+  plant, setSelectedPlant, inlineStyle, isCompanion, isAntagonist }) =>
   connectDragSource(
-    <div className={style.plant} style={{...inlineStyle}} onClick={ addPlant }
-      onMouseEnter={ handleMouseEnter ? () => handleMouseEnter(plant) : '' }>
+    <div className={classnames(style.plant, isDragging && style.plant_isDragging,
+      isCompanion && style.plant_companion, isAntagonist && style.plant_antagonist)}
+      onClick={ setSelectedPlant ? () => setSelectedPlant(plant) : '' }
+      onMouseEnter={ setSelectedPlant ? () => setSelectedPlant(plant) : '' }
+      onMouseLeave={ setSelectedPlant ? () => setSelectedPlant() : '' }
+      style={{...inlineStyle}} >
       {removePlant &&
         <div className={style.plant_remove}
           onClick={ removePlant }>x</div>
@@ -38,10 +43,7 @@ const Plant = ({ isDragging, connectDragSource, addPlant, removePlant,
       <svg className={style.plant_image}>
         <use xlinkHref={plant.image ? `#${plant.image}` : '#default-plant'} />
       </svg>
-      <span style={{ opacity: isDragging ? 0.5 : 1, color: isCompanion ? 'green' : isAntagonist ? 'red' : 'white' }}
-        className={style.plant_name}>
-        {plant.name}
-      </span>
+      <span className={style.plant_name}>{plant.name}</span>
     </div>
   );
 
@@ -50,7 +52,7 @@ Plant.propTypes = {
   connectDragSource: React.PropTypes.func.isRequired,
   addPlant: React.PropTypes.func,
   removePlant: React.PropTypes.func,
-  handleMouseEnter: React.PropTypes.func,
+  setSelectedPlant: React.PropTypes.func,
   plant: React.PropTypes.object,
   inlineStyle: React.PropTypes.object,
   isCompanion: React.PropTypes.bool,

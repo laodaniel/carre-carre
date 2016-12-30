@@ -3,6 +3,7 @@
     "key": "garlic",
     "name": "Ail",
     "plantFamilies": "alliaceae",
+    "description": "Il existe surtout deux types d'ail: l'ail blanc et l'ail rose.",
     "companions": ["carrot", "beet", "lettuce"]
   }, {
     "key": "bean",
