@@ -1,62 +1,27 @@
-import { DragSource } from 'react-dnd';
-import classnames from 'classnames';
-import ItemTypes from './ItemTypes';
-import React from 'react';
-import style from '../index.css';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 
-const plantSource = {
-  beginDrag() {
-    return {};
-  },
+const getPlant = (plants, plantKey) =>
+  plants[plants.map(plant => plant.key).indexOf(plantKey)];
 
-  endDrag(props, monitor) {
-    const dropResult = monitor.getDropResult();
-    if (dropResult) {
-      if (props.removePlant) {
-        props.removePlant();
-      }
-      props.addPlant(dropResult.index);
-    }
-  }
-};
-
-function collect(connect, monitor) {
-  return {
-    connectDragSource: connect.dragSource(),
-    isDragging: monitor.isDragging()
-  };
-}
-
-const Plant = ({ isDragging, connectDragSource, removePlant,
-  plant, setSelectedPlant, inlineStyle, isCompanion, isAntagonist }) =>
-  connectDragSource(
-    <div className={classnames(style.plant, isDragging && style.plant_isDragging,
-      isCompanion && style.plant_companion, isAntagonist && style.plant_antagonist)}
-      onClick={ setSelectedPlant ? () => setSelectedPlant(plant) : '' }
-      onMouseEnter={ setSelectedPlant ? () => setSelectedPlant(plant) : '' }
-      onMouseLeave={ setSelectedPlant ? () => setSelectedPlant() : '' }
-      style={{...inlineStyle}} >
-      {removePlant &&
-        <div className={style.plant_remove}
-          onClick={ removePlant }>x</div>
-      }
-      <svg className={style.plant_image}>
-        <use xlinkHref={plant.image ? `#${plant.image}` : '#default-plant'} />
-      </svg>
-      <span className={style.plant_name}>{plant.name}</span>
-    </div>
+const Plant = ({plants, plantKey}) => {
+  const plant = getPlant(plants, plantKey);
+  return (
+    plant ?
+      <div>
+        { plant.name }
+      </div> : null
   );
+};
 
 Plant.propTypes = {
-  isDragging: React.PropTypes.bool.isRequired,
-  connectDragSource: React.PropTypes.func.isRequired,
-  addPlant: React.PropTypes.func,
-  removePlant: React.PropTypes.func,
-  setSelectedPlant: React.PropTypes.func,
-  plant: React.PropTypes.object,
-  inlineStyle: React.PropTypes.object,
-  isCompanion: React.PropTypes.bool,
-  isAntagonist: React.PropTypes.bool
+  plantKey: PropTypes.string,
+  plants: PropTypes.array
 };
 
-export default DragSource(ItemTypes.PLANT, plantSource, collect)(Plant);
+const mapStateToProps = (state, ownProps) => ({
+  plants: state.plants,
+  plantKey: ownProps.plantKey
+});
+
+export default connect(mapStateToProps)(Plant);

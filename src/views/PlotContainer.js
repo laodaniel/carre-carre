@@ -1,11 +1,11 @@
-import Plant from './Plant';
+import DraggablePlant from './DraggablePlant';
 import React from 'react';
 import Slot from './Slot';
 import style from '../index.css';
 import { connect } from 'react-redux';
 import { addPlant, removePlant } from '../actions/actions';
 
-const Plot = ({plot, plants, addPlant, removePlant, setSelectedPlant } = {}) =>
+const Plot = ({plot, plants, addPlant, removePlant, showDetails } = {}) =>
   <section className={style.plot}>
     { [...Array(plot.slots).keys()].map((slot, index) => {
       let plantData;
@@ -16,10 +16,10 @@ const Plot = ({plot, plants, addPlant, removePlant, setSelectedPlant } = {}) =>
       return (
         <Slot key={ index } index={ index }>
           { plantData &&
-            <Plant plant={plantData}
+            <DraggablePlant plant={plantData}
               addPlant={ (index) => addPlant(plantData.key, index) }
               removePlant={ () => removePlant(plantIndex) }
-              setSelectedPlant={ setSelectedPlant }/>
+              showDetails={ showDetails }/>
           }
         </Slot>
       );

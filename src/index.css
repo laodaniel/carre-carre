@@ -40,7 +40,6 @@
 }
 
 .slot {
-  position: relative;
   display: flex;
   flex: 1 0 calc(33% - 2px);
   background: #999;
@@ -54,6 +53,7 @@
 }
 
 .plant {
+  position: relative;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -97,10 +97,18 @@
 .plant_remove {
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 7px;
   color: white;
 }
 
+.plant_showDetails {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  color: white;
+}
+
+.plant_showDetails:hover,
 .plant_remove:hover {
   cursor: pointer;
   color: black;
@@ -116,6 +124,12 @@
   top: 0;
   right: 0;
   bottom: 0;
+  background-color: white;
+}
+
+.details_hide:hover {
+  color: gray;
+  cursor: pointer;
 }
 
 .details_title {

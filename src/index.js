@@ -28,7 +28,7 @@ class App extends Component {
     };
   }
 
-  setSelectedPlant(selectedPlant) {
+  showDetails(selectedPlant) {
     this.setState({ selectedPlant });
   }
 
@@ -37,9 +37,11 @@ class App extends Component {
       <Provider store={store}>
         <div className={style.container}>
           <Header plot={state.plot}/>
-          <PlotContainer setSelectedPlant={ (plant) => this.setSelectedPlant(plant) } />
-          <PlantSelector/>
-          { this.state.selectedPlant && <PlantDetails plant={ this.state.selectedPlant }/> }
+          <PlotContainer showDetails={ (plant) => this.showDetails(plant) } />
+          <PlantSelector showDetails={ (plant) => this.showDetails(plant) }/>
+          { this.state.selectedPlant &&
+              <PlantDetails plant={ this.state.selectedPlant }
+                hide={ () => this.showDetails(undefined) }/> }
         </div>
       </Provider>
     );
