@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
-import { ADD_PLANT, REMOVE_PLANT, SET_NAME, SET_DESCRIPTION } from '../actions/actions.js';
+import { ADD_PLANT, REMOVE_PLANT, SET_NAME, SET_DESCRIPTION,
+  SET_VISIBILITY_FILTER } from '../actions/actions.js';
 
 const plants = (state = {}) => state;
 
@@ -28,8 +29,17 @@ const plot = (state = {}, action) => {
   }
 };
 
+const visibilityFilter = (state = 'SHOW_ALL', action) => {
+  switch (action.type) {
+  case SET_VISIBILITY_FILTER:
+    return action.filter;
+  default:
+    return state;
+  }
+};
+
 const rootReducer = combineReducers({
-  plants, plot
+  plants, plot, visibilityFilter
 });
 
 export default rootReducer;

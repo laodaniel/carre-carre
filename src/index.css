@@ -115,8 +115,15 @@
 }
 
 .plantSelector {
+  position: relative;
   padding: 10px;
   background-color: lightgray;
+}
+
+.plantSelector_filter {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 .details {
@@ -124,7 +131,9 @@
   top: 0;
   right: 0;
   bottom: 0;
+  width: 50%;
   background-color: white;
+  padding: 10px;
 }
 
 .details_hide:hover {
@@ -136,6 +145,19 @@
   text-align: center;
 }
 
+.details_family {
+  font-style: italic;
+}
+
+.details_description {
+  padding: 5px 0;
+}
+
 .details_family::first-letter {
   text-transform: uppercase;
+}
+
+.details_list {
+  padding: 5px;
+  font-size: 13px;
 }

@@ -2,6 +2,7 @@ export const ADD_PLANT = 'ADD_PLANT';
 export const REMOVE_PLANT = 'REMOVE_PLANT';
 export const SET_NAME = 'SET_NAME';
 export const SET_DESCRIPTION = 'SET_DESCRIPTION';
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
 export function addPlant(key, slot) {
   return { type: ADD_PLANT, key, slot };
@@ -17,4 +18,8 @@ export function setName(name) {
 
 export function setDescription(description) {
   return { type: SET_DESCRIPTION, description };
+}
+
+export function setVisibilityFilter(filter) {
+  return {type: SET_VISIBILITY_FILTER, filter};
 }
