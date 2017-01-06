@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { DragDropContext } from 'react-dnd';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
+import Bobby from './views/Bobby';
 import Header from './views/Header';
 import HTML5Backend from 'react-dnd-html5-backend';
 import plants from './data/plants.json';
@@ -42,10 +43,12 @@ class App extends Component {
           { this.state.selectedPlant &&
               <PlantDetails plant={ this.state.selectedPlant }
                 hide={ () => this.showDetails(undefined) }/> }
+          <Bobby/>
         </div>
       </Provider>
     );
   }
 }
 
-render(React.createElement(DragDropContext(HTML5Backend)(App)), document.getElementById('main'));
+render(React.createElement(DragDropContext(HTML5Backend)(App)),
+  document.getElementById('main'));

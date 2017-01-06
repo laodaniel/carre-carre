@@ -39,9 +39,14 @@
   min-height: 20em;
 }
 
+.plotSize {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .slot {
   display: flex;
-  flex: 1 0 calc(33% - 2px);
   background: #999;
   border: 1px solid gray;
   text-align: center;
@@ -98,6 +103,18 @@
   position: absolute;
   top: 5px;
   right: 7px;
+  color: white;
+}
+
+.tooltip[data-tooltip]:hover::after {
+  position: absolute;
+  content: attr(data-tooltip);
+  cursor: pointer;
+  padding: 4px 8px;
+  left: 0;
+  bottom: 100%;
+  white-space: nowrap;
+  background-color: black;
   color: white;
 }
 
@@ -160,4 +177,17 @@
 .details_list {
   padding: 5px;
   font-size: 13px;
+}
+
+.bobby {
+  /*display: none; */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: green;
+}
+
+.bobby_isVisible {
+  display: block;
 }

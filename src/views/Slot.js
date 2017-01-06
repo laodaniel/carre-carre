@@ -25,8 +25,10 @@ function collect(connect, monitor) {
 
 class Slot extends Component {
   render() {
+    const size = 100 / Math.sqrt(this.props.numberOfSlots);
     return this.props.connectDropTarget(
-      <div className={this.props.isOver &&  this.props.canDrop ? style.slotOver : style.slot}>
+      <div style={{flex: `1 0 calc(${size}% - 2px)`}}
+        className={this.props.isOver &&  this.props.canDrop ? style.slotOver : style.slot}>
         { this.props.children }
       </div>
     );
@@ -37,7 +39,8 @@ Slot.propTypes = {
   canDrop: React.PropTypes.bool,
   isOver: React.PropTypes.bool,
   children: React.PropTypes.object,
-  connectDropTarget: React.PropTypes.func
+  connectDropTarget: React.PropTypes.func,
+  numberOfSlots: React.PropTypes.number
 };
 
 export default DropTarget(ItemTypes.PLANT, slotDropTarget, collect)(Slot);

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { ADD_PLANT, REMOVE_PLANT, SET_NAME, SET_DESCRIPTION,
-  SET_VISIBILITY_FILTER } from '../actions/actions.js';
+  SET_VISIBILITY_FILTER, SET_NUMBER_OF_SLOTS,
+  BOBBY_SAYS, SHOW_BOBBY } from '../actions/actions.js';
 
 const plants = (state = {}) => state;
 
@@ -24,6 +25,8 @@ const plot = (state = {}, action) => {
     return {...state, name: action.name};
   case SET_DESCRIPTION:
     return {...state, description: action.description};
+  case SET_NUMBER_OF_SLOTS:
+    return {...state, slots: action.slots};
   default:
     return state;
   }
@@ -38,8 +41,19 @@ const visibilityFilter = (state = 'SHOW_ALL', action) => {
   }
 };
 
+const bobby = (state = {}, action) => {
+  switch (action.type) {
+  case BOBBY_SAYS:
+    return action.message;
+  case SHOW_BOBBY:
+    return action.isVisible;
+  default:
+    return state;
+  }
+};
+
 const rootReducer = combineReducers({
-  plants, plot, visibilityFilter
+  plants, plot, visibilityFilter, bobby
 });
 
 export default rootReducer;

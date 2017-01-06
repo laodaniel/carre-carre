@@ -4,12 +4,6 @@ import DraggablePlant from './DraggablePlant';
 import React, { Component } from 'react';
 import style from '../index.css';
 
-const freeSlot = (plot) => {
-  const freeSlots = [...Array(plot.slots).keys()].reduce((acc, id) =>
-    plot.plants.map(p => p.slot).indexOf(id) === -1 ? [...acc, id] : acc, []);
-  return typeof freeSlots[0] === 'number' ? freeSlots[0] : -1;
-};
-
 const getVisiblePlants = (plants, filter) => {
   switch (filter) {
   case 'SHOW_ALL':
@@ -69,10 +63,10 @@ class PlantSelector extends Component {
   }
 
   render() {
-    const { plants, plot, addPlant, showDetails, setVisibilityFilter } = this.props;
+    const { plants, addPlant, showDetails, setVisibilityFilter } = this.props;
     return (
       <aside className={style.plantSelector}>
-        <h3>Add plant:</h3>
+        <h3>Add a plant:</h3>
         <select onChange={ (event) => setVisibilityFilter(event.target.value)}
           className={style.plantSelector_filter}>
           <option value="SHOW_ALL">All</option>
@@ -92,7 +86,7 @@ class PlantSelector extends Component {
         {plants.map((plant, index) =>
           <DraggablePlant inlineStyle={{display: 'inline-block', width: 'initial'}}
             plant={plant} key={`${plant.key}-${index}`}
-            addPlant={ (index) => addPlant(plant.key, isNaN(index) ? freeSlot(plot) : index) }
+            addPlant={ (index) => addPlant(plant.key, index) }
             isCompanion={ this.isCompanion(plant.key) }
             isAntagonist={ this.isAntagonist(plant.key) }
             setSelectedPlant={ (plant) => this.setSelectedPlant(plant) }

@@ -28,7 +28,7 @@ function collect(connect, monitor) {
 }
 
 const Plant = ({ isDragging, connectDragSource, removePlant,
-  plant, setSelectedPlant, inlineStyle, isCompanion, isAntagonist, showDetails }) =>
+  plant, setSelectedPlant, inlineStyle, isCompanion, isAntagonist, showDetails}) =>
   connectDragSource(
     <div className={classnames(style.plant, isDragging && style.plant_isDragging,
       isCompanion && style.plant_companion, isAntagonist && style.plant_antagonist)}
