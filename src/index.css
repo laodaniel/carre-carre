@@ -191,3 +191,21 @@
 .bobby_isVisible {
   display: block;
 }
+
+.months {
+  display: flex;
+  justify-content: space-between;
+}
+
+.month {
+  cursor: pointer;
+  user-select: none;
+}
+
+.month_current {
+  font-weight: 600;
+}
+
+.month_selected {
+  text-decoration: underline;
+}

@@ -15,6 +15,7 @@ import PlotContainer from './views/PlotContainer';
 import React, { Component } from 'react';
 import reducer from './reducers/reducers';
 import style from './index.css';
+import Timeline from './views/Timeline';
 
 const initialState = { plants, plot };
 let store = createStore(reducer, initialState);
@@ -25,7 +26,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedPlant: undefined
+      selectedPlant: undefined,
+      selectedDate: new Date()
     };
   }
 
@@ -33,11 +35,17 @@ class App extends Component {
     this.setState({ selectedPlant });
   }
 
+  setSelectedDate(selectedDate) {
+    this.setState({ selectedDate });
+  }
+
   render() {
     return(
       <Provider store={store}>
         <div className={style.container}>
           <Header plot={state.plot}/>
+          <Timeline selectedDate={ this.state.selectedDate }
+            onMonthClick={ (date) => this.setSelectedDate(date) }/>
           <PlotContainer showDetails={ (plant) => this.showDetails(plant) } />
           <PlantSelector showDetails={ (plant) => this.showDetails(plant) }/>
           { this.state.selectedPlant &&

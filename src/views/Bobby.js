@@ -24,7 +24,7 @@ const Bobby = ({bobby, plot, plants}) => {
     <div className={classnames(style.bobby, bobby.isVisible && style.bobby_visible)} >
       {antagonists.map((a, index) =>
         <div key={ index }>
-          { a.plant.key } in slot ${ a.slot } has antagonists :
+          { a.plant.key } in slot { a.slot } has antagonists :
           <div>{a.antagonists.map((ant, i) =>
             <span key={i}>{ant.key} in slot {ant.slot}</span>)}
           </div>

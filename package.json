@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "2.4.1",
+    "date-fns": "^1.23.0",
     "postcss-cssnext": "^2.9.0",
     "react": "15.4.1",
     "react-dom": "15.4.1",

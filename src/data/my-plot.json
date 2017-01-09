@@ -2,6 +2,7 @@
   "name": "Mon carré potager 2016",
   "description": "Optimize my plot!",
   "slots": 9,
+  "date": "2017-01-31",
   "plants": [
     {
       "key": "garlic",
