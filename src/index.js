@@ -7,6 +7,7 @@ import { render } from 'react-dom';
 import Bobby from './views/Bobby';
 import Header from './views/Header';
 import HTML5Backend from 'react-dnd-html5-backend';
+import Moon from './views/Moon';
 import plants from './data/plants.json';
 import PlantDetails from './views/PlantDetails';
 import PlantSelector from './views/PlantSelector';
@@ -44,8 +45,9 @@ class App extends Component {
       <Provider store={store}>
         <div className={style.container}>
           <Header plot={state.plot}/>
+          <Moon date={ this.state.selectedDate }/>
           <Timeline selectedDate={ this.state.selectedDate }
-            onMonthClick={ (date) => this.setSelectedDate(date) }/>
+            setSelectedDate={ (date) => this.setSelectedDate(date) }/>
           <PlotContainer showDetails={ (plant) => this.showDetails(plant) } />
           <PlantSelector showDetails={ (plant) => this.showDetails(plant) }/>
           { this.state.selectedPlant &&
