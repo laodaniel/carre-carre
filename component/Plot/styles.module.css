@@ -1,0 +1,19 @@
+.plot {
+  display: grid;
+  width: 60%;
+  max-width: calc(90vh - var(--header-height));
+  grid-gap: 16px;
+  margin: auto;
+}
+
+.slot {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.slot::after {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}

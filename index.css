@@ -1,0 +1,53 @@
+:root {
+  --header-height: 115px;
+}
+
+html, body, div, h1, h2, h3, ul, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: arial, helvetica;
+}
+
+input, button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p:first-child {
+  margin: 0;
+}
+
+button, a, div[role=button] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  overflow: hidden;
+}
+
+body::before, body::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body::before {
+  background: url('./asset/background.jpg');
+  background-size: cover;
+  filter: blur(3px);
+  transform: scale(1.1);
+}
+
+body::after {
+  background-color: rgba(0, 0, 0, 0.4);
+}
