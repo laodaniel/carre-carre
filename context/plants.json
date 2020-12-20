@@ -1,9 +1,7 @@
 [
   {
      "key":"garlic",
-     "name":"Ail",
      "plantFamilies":"alliaceae",
-     "description":"Il existe surtout deux types d'ail: l'ail blanc et l'ail rose.",
      "firends":[
         "tomato",
         "carrot",
@@ -18,7 +16,6 @@
   },
   {
      "key":"bean",
-     "name":"Haricot",
      "plantFamilies":"fabaceae",
      "firends":[
         "carrot",
@@ -50,7 +47,6 @@
   },
   {
      "key":"broadBean",
-     "name":"Fève",
      "variety":"bean",
      "foes":[
         "fennel"
@@ -58,7 +54,6 @@
   },
   {
      "key":"artichoke",
-     "name":"Artichaut",
      "plantFamilies":"asteraceae",
      "firends":[
         "cabbage",
@@ -67,7 +62,6 @@
   },
   {
      "key":"cabbage",
-     "name":"Chou",
      "firends":[
         "beet",
         "bean",
@@ -88,7 +82,6 @@
   },
   {
      "key":"broccoli",
-     "name":"Brocoli",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
      "firends":[
@@ -112,7 +105,6 @@
   },
   {
      "key":"brusselsSprouts",
-     "name":"Chou de Bruxelles",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
      "firends":[
@@ -122,7 +114,6 @@
   },
   {
      "key":"kale",
-     "name":"Chou frisé",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
      "firends":[
@@ -132,7 +123,6 @@
   },
   {
      "key":"headCabbage",
-     "name":"Chou pommé",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
      "firends":[
@@ -143,7 +133,6 @@
   },
   {
      "key":"cauliflower",
-     "name":"Chou fleur",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
      "firends":[
@@ -155,12 +144,10 @@
      ]
   },
   {
-     "key":"celery",
-     "name":"Céleri"
+     "key":"celery"
   },
   {
-     "key":"celery",
-     "name":"Céléri-branche",
+     "key":"celery-bough",
      "plantFamilies":"apiaceae",
      "variety":"celery",
      "firends":[
@@ -171,7 +158,6 @@
   },
   {
      "key":"celeriac",
-     "name":"Céleri-rave",
      "plantFamilies":"apiaceae",
      "variety":"celery",
      "firends":[
@@ -182,7 +168,6 @@
   },
   {
      "key":"eggplant",
-     "name":"Aubergine",
      "plantFamilies":"solanaceae",
      "firends":[
         "bean",
@@ -193,7 +178,6 @@
   },
   {
      "key":"beet",
-     "name":"Betteraves",
      "plantFamilies":"chenopodiaceae",
      "firends":[
         "brusselsSprouts",
@@ -211,7 +195,6 @@
   },
   {
      "key":"carrot",
-     "name":"Carotte",
      "plantFamilies":"apiaceae",
      "firends":[
         "onion",
@@ -235,7 +218,6 @@
   },
   {
      "key":"salad",
-     "name":"Salade",
      "image":"salad",
      "firends":[
         "carrot",
@@ -253,7 +235,6 @@
   },
   {
      "key":"lettuce",
-     "name":"Laitue",
      "plantFamilies":"asteraceae",
      "variety":"salad",
      "firends":[
@@ -264,7 +245,6 @@
   },
   {
      "key":"chicory",
-     "name":"Chicorée frisée",
      "plantFamilies":"asteraceae",
      "variety":"salad",
      "firends":[
@@ -273,7 +253,6 @@
   },
   {
      "key":"endive",
-     "name":"Scarole",
      "plantFamilies":"asteraceae",
      "variety":"salad",
      "firends":[
@@ -282,7 +261,6 @@
   },
   {
      "key":"cornSalad",
-     "name":"Mâche",
      "plantFamilies":"valerianaceae",
      "variety":"salad",
      "firends":[
@@ -291,7 +269,6 @@
   },
   {
      "key":"cucumber",
-     "name":"Concombre",
      "plantFamilies":"cucurbitaceae",
      "firends":[
         "bean",
@@ -313,7 +290,6 @@
   },
   {
      "key":"cucurbita",
-     "name":"Courge",
      "plantFamilies":"cucurbitaceae",
      "firends":[
         "corn",
@@ -328,7 +304,6 @@
   },
   {
      "key":"zucchini",
-     "name":"Courgette",
      "plantFamilies":"cucurbitaceae",
      "firends":[
         "corn",
@@ -337,7 +312,6 @@
   },
   {
      "key":"shallot",
-     "name":"Echalote",
      "plantFamilies":"alliaceae",
      "firends":[
         "carrot",
@@ -353,7 +327,6 @@
   },
   {
      "key":"spinach",
-     "name":"Epinard",
      "plantFamilies":"chenopodiaceae",
      "firends":[
         "bean",
@@ -370,7 +343,6 @@
   },
   {
      "key":"fennel",
-     "name":"Fenouil bulbeux",
      "plantFamilies":"apiaceae",
      "firends":[
         "leek"
@@ -378,7 +350,6 @@
   },
   {
      "key":"corn",
-     "name":"Maïs",
      "plantFamilies":"poaceae",
      "firends":[
         "bean"
@@ -386,7 +357,6 @@
   },
   {
      "key":"melon",
-     "name":"Melon",
      "plantFamilies":"cucurbitaceae",
      "firends":[
         "lettuce",
@@ -395,7 +365,6 @@
   },
   {
      "key":"turnip",
-     "name":"Navet",
      "plantFamilies":"brassicaceae",
      "firends":[
         "lettuce",
@@ -405,7 +374,6 @@
   },
   {
      "key":"onion",
-     "name":"Oignon",
      "plantFamilies":"alliaceae",
      "firends":[
         "carrot",
@@ -421,7 +389,6 @@
   },
   {
      "key":"sorrel",
-     "name":"Oseille",
      "plantFamilies":"polygonaceae‎",
      "firends":[
         "radish",
@@ -430,12 +397,10 @@
   },
   {
      "key":"watermelon",
-     "name":"Pastèque",
      "plantFamilies":"cucurbitaceae"
   },
   {
      "key":"leek",
-     "name":"Poireau",
      "plantFamilies":"alliaceae",
      "firends":[
         "celery",
@@ -449,7 +414,6 @@
   },
   {
      "key":"chard",
-     "name":"Blette",
      "plantFamilies":"chenopodiaceae",
      "firends":[
         "onion",
@@ -458,7 +422,6 @@
   },
   {
      "key":"pea",
-     "name":"Pois",
      "plantFamilies":"fabaceae",
      "firends":[
         "cabbage",
@@ -478,7 +441,6 @@
   },
   {
      "key":"chickpea",
-     "name":"Pois chiche",
      "plantFamilies":"fabaceae",
      "firends":[
         "cucumber"
@@ -486,7 +448,6 @@
   },
   {
      "key":"pepper",
-     "name":"Poivron",
      "plantFamilies":"solanaceae",
      "firends":[
         "tomato",
@@ -495,7 +456,6 @@
   },
   {
      "key":"potato",
-     "name":"Pomme de terre",
      "plantFamilies":"solanaceae",
      "firends":[
         "cabbage",
@@ -513,7 +473,6 @@
   },
   {
      "key":"pumpkin",
-     "name":"Potiron",
      "plantFamilies":"cucurbitaceae",
      "firends":[
         "corn",
@@ -522,7 +481,6 @@
   },
   {
      "key":"radish",
-     "name":"Radis",
      "plantFamilies":"brassicaceae",
      "firends":[
         "carrot",
@@ -538,12 +496,10 @@
   },
   {
      "key":"rhubarb",
-     "name":"Rhubarbe",
      "plantFamilies":"polygonaceae‎"
   },
   {
      "key":"salsify",
-     "name":"Salsifis",
      "plantFamilies":"asteraceae",
      "firends":[
         "leek",
@@ -552,7 +508,6 @@
   },
   {
      "key":"tomato",
-     "name":"Tomate",
      "plantFamilies":"solanaceae",
      "firends":[
         "garlic",
@@ -575,7 +530,6 @@
   },
   {
      "key":"cassis",
-     "name":"Cassis",
      "firends":[
         "pea",
         "strawberry",
@@ -585,7 +539,6 @@
   },
   {
      "key":"strawberry",
-     "name":"Fraisier",
      "firends":[
         "radish",
         "cornSalad",
@@ -604,14 +557,12 @@
   },
   {
      "key":"raspberry",
-     "name":"Framboise",
      "firends":[
         "bean"
      ]
   },
   {
-     "key":"Currant",
-     "name":"Groseille",
+     "key":"currant",
      "firends":[
         "bean",
         "pea"
@@ -619,7 +570,6 @@
   },
   {
      "key":"dill",
-     "name":"Aneth",
      "firends":[
         "bean",
         "nasturtium"
@@ -627,14 +577,12 @@
   },
   {
      "key":"basil",
-     "name":"Basilic",
      "firends":[
         "tomato"
      ]
   },
   {
      "key":"chervil",
-     "name":"Cerfeuil",
      "firends":[
         "scallion",
         "verbena"
@@ -642,7 +590,6 @@
   },
   {
      "key":"chive",
-     "name":"Ciboulette",
      "firends":[
         "thym",
         "parsley",
@@ -651,7 +598,6 @@
   },
   {
      "key":"coriander",
-     "name":"Coriandre",
      "firends":[
         "basil",
         "borage"
@@ -659,7 +605,6 @@
   },
   {
      "key":"tarragon",
-     "name":"Estragon",
      "firends":[
         "chive",
         "borage",
@@ -668,7 +613,6 @@
   },
   {
      "key":"melissa",
-     "name":"Mélisse",
      "firends":[
         "sorrel",
         "minth"
@@ -676,14 +620,12 @@
   },
   {
      "key":"minth",
-     "name":"Menthe",
      "firends":[
         "chervil"
      ]
   },
   {
      "key":"parsley",
-     "name":"Persil",
      "firends":[
         "chive",
         "salad"
@@ -691,7 +633,6 @@
   },
   {
      "key":"rosemary",
-     "name":"Romarin",
      "firends":[
         "fennel",
         "lavender",
@@ -700,7 +641,6 @@
   },
   {
      "key":"satureja",
-     "name":"Sarriette",
      "firends":[
         "thyme",
         "sage",
@@ -709,7 +649,6 @@
   },
   {
      "key":"sage",
-     "name":"Sauge",
      "firends":[
         "cabbage",
         "thyme",
@@ -718,7 +657,6 @@
   },
   {
      "key":"thyme",
-     "name":"Thym",
      "firends":[
         "Ciboulette",
         "sage",
@@ -726,39 +664,31 @@
      ]
   },
   {
-     "key":"scallion",
-     "name":"Ciboule"
+     "key":"scallion"
   },
   {
-     "key":"borage",
-     "name":"Bourrache"
+     "key":"borage"
   },
   {
-     "key":"verbena",
-     "name":"Verveine"
+     "key":"verbena"
   },
   {
      "key":"marigold",
-     "name":"Souci",
      "plantFamilies":"flower"
   },
   {
      "key":"nasturtium",
-     "name":"Capucine",
      "plantFamilies":"flower"
   },
   {
-     "key":"oregano",
-     "name":"Origan"
+     "key":"oregano"
   },
   {
      "key":"carnationOfIndia",
-     "name":"Oeillet d'inde",
      "plantFamilies":"flower"
   },
   {
      "key":"mustard",
-     "name":"Moutarde",
      "plantFamilies":"brassicaceae"
   }
 ]

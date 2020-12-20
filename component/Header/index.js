@@ -2,6 +2,7 @@ import {useContext } from 'preact/hooks';
 import AppContext from 'context/AppContext';
 import EditableLabel from 'component/EditableLabel';
 import GithubCorner from './GithubCorner';
+import LanguageSelector from './LanguageSelector';
 import './styles.module.css';
 
 const Header = () => {
@@ -11,6 +12,7 @@ const Header = () => {
     <header>
       <EditableLabel label={name} />
       <EditableLabel label={description} />
+      <LanguageSelector />
       <GithubCorner />
     </header>
   )

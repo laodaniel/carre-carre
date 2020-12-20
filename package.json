@@ -41,7 +41,8 @@
   "alias": {
     "asset": "./asset",
     "component": "./component",
-    "context": "./context"
+    "context": "./context",
+    "i18n": "./i18n"
   },
   "author": "Daniel Lao",
   "license": "ISC",

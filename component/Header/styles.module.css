@@ -14,7 +14,7 @@ header {
 }
 
 .githubIcon {
-  fill: #fff;
+  fill: #03A678;
   color: #151513;
 }
 
@@ -41,4 +41,31 @@ header {
   .githubCorner .octoArm {
     animation: octocat-wave 560ms ease-in-out;
   }
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+}
+
+.languageSelector svg {
+  width: 32px;
+  fill: white;
+  padding-right: 8px;
+}
+
+.language {
+  color: white;
+  padding: 0 8px;
+  text-decoration: underline;
+}
+
+.languageSelected {
+  color: grey;
+  padding: 0 8px;
+  text-decoration: none;
+}
+
+.language:hover {
+  text-decoration: none;
 }

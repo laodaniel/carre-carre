@@ -18,7 +18,7 @@ const Plot = () => {
 
   return (
     <main className={styles.plot} style={plotStyle}>
-      {plants.map(({ key, name }, index) => (
+      {plants.map(({ key }, index) => (
         <div
           data-key={key}
           data-index={index}
@@ -26,7 +26,7 @@ const Plot = () => {
           className={styles.slot}
           onClick={onClickHandler}
         >
-          {name && <Plant id={key} name={name} />}
+          {key && <Plant id={key} />}
         </div>
       ))}
     </main>
