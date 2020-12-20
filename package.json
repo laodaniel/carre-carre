@@ -2,7 +2,6 @@
   "name": "carre-carre",
   "version": "1.0.0",
   "description": "Optimize plants association",
-  "main": "index.js",
   "dependencies": {
     "preact": "^10.5.7"
   },
@@ -15,7 +14,8 @@
   },
   "scripts": {
     "start": "parcel serve index.html --no-cache",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --no-cache",
+    "build:gh": "GITHUB_PAGES=carre-carre parcel build index.html --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
@@ -29,7 +29,15 @@
       ]
     ]
   },
-  "browserslist": "> 0.2%",
+  "targets": {
+    "dist": {
+      "engines": {
+        "browsers": "> 0.2%"
+      },
+      "publicUrl": ".",
+      "sourceMap": false
+    }
+  },
   "alias": {
     "asset": "./asset",
     "component": "./component",
