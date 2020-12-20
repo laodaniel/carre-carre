@@ -4,7 +4,8 @@ import EditableLabel from 'component/EditableLabel';
 import './styles.module.css';
 
 const Header = () => {
-  const { name, description } = useContext(AppContext);
+  const [state] = useContext(AppContext);
+  const { name, description } = state;
   return (
     <header>
       <EditableLabel label={name} />

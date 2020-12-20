@@ -4,14 +4,14 @@
      "name":"Ail",
      "plantFamilies":"alliaceae",
      "description":"Il existe surtout deux types d'ail: l'ail blanc et l'ail rose.",
-     "companions":[
+     "firends":[
         "tomato",
         "carrot",
         "beet",
         "lettuce",
         "strawberry"
      ],
-     "antagonists":[
+     "foes":[
         "bean",
         "pea"
      ]
@@ -20,7 +20,7 @@
      "key":"bean",
      "name":"Haricot",
      "plantFamilies":"fabaceae",
-     "companions":[
+     "firends":[
         "carrot",
         "radish",
         "beet",
@@ -37,7 +37,7 @@
         "strawberry",
         "marigold"
      ],
-     "antagonists":[
+     "foes":[
         "chive",
         "garlic",
         "leek",
@@ -52,7 +52,7 @@
      "key":"broadBean",
      "name":"Fève",
      "variety":"bean",
-     "antagonists":[
+     "foes":[
         "fennel"
      ]
   },
@@ -60,7 +60,7 @@
      "key":"artichoke",
      "name":"Artichaut",
      "plantFamilies":"asteraceae",
-     "companions":[
+     "firends":[
         "cabbage",
         "salad"
      ]
@@ -68,7 +68,7 @@
   {
      "key":"cabbage",
      "name":"Chou",
-     "companions":[
+     "firends":[
         "beet",
         "bean",
         "pea",
@@ -82,7 +82,7 @@
         "sage",
         "thyme"
      ],
-     "antagonists":[
+     "foes":[
         "mustard"
      ]
   },
@@ -91,7 +91,7 @@
      "name":"Brocoli",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
-     "companions":[
+     "firends":[
         "celery",
         "carrot",
         "Basil",
@@ -115,7 +115,7 @@
      "name":"Chou de Bruxelles",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
-     "companions":[
+     "firends":[
         "lettuce",
         "spinach"
      ]
@@ -125,7 +125,7 @@
      "name":"Chou frisé",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
-     "companions":[
+     "firends":[
         "bean",
         "celery"
      ]
@@ -135,7 +135,7 @@
      "name":"Chou pommé",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
-     "companions":[
+     "firends":[
         "lettuce",
         "pea",
         "tomato"
@@ -146,7 +146,7 @@
      "name":"Chou fleur",
      "plantFamilies":"brassicaceae",
      "variety":"cabbage",
-     "companions":[
+     "firends":[
         "bean",
         "celery",
         "oregano",
@@ -163,7 +163,7 @@
      "name":"Céléri-branche",
      "plantFamilies":"apiaceae",
      "variety":"celery",
-     "companions":[
+     "firends":[
         "pea",
         "onion",
         "tomato"
@@ -174,7 +174,7 @@
      "name":"Céleri-rave",
      "plantFamilies":"apiaceae",
      "variety":"celery",
-     "companions":[
+     "firends":[
         "leek",
         "beet",
         "cabbage"
@@ -184,7 +184,7 @@
      "key":"eggplant",
      "name":"Aubergine",
      "plantFamilies":"solanaceae",
-     "companions":[
+     "firends":[
         "bean",
         "lettuce",
         "radish",
@@ -195,7 +195,7 @@
      "key":"beet",
      "name":"Betteraves",
      "plantFamilies":"chenopodiaceae",
-     "companions":[
+     "firends":[
         "brusselsSprouts",
         "cabbage",
         "cauliflower",
@@ -205,7 +205,7 @@
         "onion",
         "sage"
      ],
-     "antagonists":[
+     "foes":[
         "bean"
      ]
   },
@@ -213,7 +213,7 @@
      "key":"carrot",
      "name":"Carotte",
      "plantFamilies":"apiaceae",
-     "companions":[
+     "firends":[
         "onion",
         "garlic",
         "pea",
@@ -227,7 +227,7 @@
         "coriander",
         "rosemary"
      ],
-     "antagonists":[
+     "foes":[
         "potato",
         "dill",
         "fennel"
@@ -237,7 +237,7 @@
      "key":"salad",
      "name":"Salade",
      "image":"salad",
-     "companions":[
+     "firends":[
         "carrot",
         "cauliflower",
         "leek",
@@ -247,7 +247,7 @@
         "cucumber",
         "cucurbita"
      ],
-     "antagonists":[
+     "foes":[
         "parsley"
      ]
   },
@@ -256,7 +256,7 @@
      "name":"Laitue",
      "plantFamilies":"asteraceae",
      "variety":"salad",
-     "companions":[
+     "firends":[
         "carrot",
         "radish",
         "bean"
@@ -267,7 +267,7 @@
      "name":"Chicorée frisée",
      "plantFamilies":"asteraceae",
      "variety":"salad",
-     "companions":[
+     "firends":[
         "cauliflower"
      ]
   },
@@ -276,7 +276,7 @@
      "name":"Scarole",
      "plantFamilies":"asteraceae",
      "variety":"salad",
-     "companions":[
+     "firends":[
         "cauliflower"
      ]
   },
@@ -285,7 +285,7 @@
      "name":"Mâche",
      "plantFamilies":"valerianaceae",
      "variety":"salad",
-     "companions":[
+     "firends":[
         "leek"
      ]
   },
@@ -293,7 +293,7 @@
      "key":"cucumber",
      "name":"Concombre",
      "plantFamilies":"cucurbitaceae",
-     "companions":[
+     "firends":[
         "bean",
         "celery",
         "carrot",
@@ -305,7 +305,7 @@
         "oregano",
         "nasturtium"
      ],
-     "antagonists":[
+     "foes":[
         "tomato",
         "eggplant",
         "potato"
@@ -315,14 +315,14 @@
      "key":"cucurbita",
      "name":"Courge",
      "plantFamilies":"cucurbitaceae",
-     "companions":[
+     "firends":[
         "corn",
         "bean",
         "lettuce",
         "nasturtium",
         "marigold"
      ],
-     "antagonists":[
+     "foes":[
         "potato"
      ]
   },
@@ -330,7 +330,7 @@
      "key":"zucchini",
      "name":"Courgette",
      "plantFamilies":"cucurbitaceae",
-     "companions":[
+     "firends":[
         "corn",
         "bean"
      ]
@@ -339,13 +339,13 @@
      "key":"shallot",
      "name":"Echalote",
      "plantFamilies":"alliaceae",
-     "companions":[
+     "firends":[
         "carrot",
         "lettuce",
         "cucumber",
         "tomato"
      ],
-     "antagonists":[
+     "foes":[
         "leek",
         "pea",
         "bean"
@@ -355,7 +355,7 @@
      "key":"spinach",
      "name":"Epinard",
      "plantFamilies":"chenopodiaceae",
-     "companions":[
+     "firends":[
         "bean",
         "carrot",
         "salad",
@@ -363,7 +363,7 @@
         "leek",
         "strawberry"
      ],
-     "antagonists":[
+     "foes":[
         "coriander",
         "sorrel"
      ]
@@ -372,7 +372,7 @@
      "key":"fennel",
      "name":"Fenouil bulbeux",
      "plantFamilies":"apiaceae",
-     "companions":[
+     "firends":[
         "leek"
      ]
   },
@@ -380,7 +380,7 @@
      "key":"corn",
      "name":"Maïs",
      "plantFamilies":"poaceae",
-     "companions":[
+     "firends":[
         "bean"
      ]
   },
@@ -388,7 +388,7 @@
      "key":"melon",
      "name":"Melon",
      "plantFamilies":"cucurbitaceae",
-     "companions":[
+     "firends":[
         "lettuce",
         "bean"
      ]
@@ -397,7 +397,7 @@
      "key":"turnip",
      "name":"Navet",
      "plantFamilies":"brassicaceae",
-     "companions":[
+     "firends":[
         "lettuce",
         "spinach",
         "fennel"
@@ -407,13 +407,13 @@
      "key":"onion",
      "name":"Oignon",
      "plantFamilies":"alliaceae",
-     "companions":[
+     "firends":[
         "carrot",
         "lettuce",
         "cucumber",
         "tomato"
      ],
-     "antagonists":[
+     "foes":[
         "leek",
         "pea",
         "bean"
@@ -423,7 +423,7 @@
      "key":"sorrel",
      "name":"Oseille",
      "plantFamilies":"polygonaceae‎",
-     "companions":[
+     "firends":[
         "radish",
         "parsley"
      ]
@@ -437,7 +437,7 @@
      "key":"leek",
      "name":"Poireau",
      "plantFamilies":"alliaceae",
-     "companions":[
+     "firends":[
         "celery",
         "salsify",
         "fennel",
@@ -451,7 +451,7 @@
      "key":"chard",
      "name":"Blette",
      "plantFamilies":"chenopodiaceae",
-     "companions":[
+     "firends":[
         "onion",
         "turnip"
      ]
@@ -460,7 +460,7 @@
      "key":"pea",
      "name":"Pois",
      "plantFamilies":"fabaceae",
-     "companions":[
+     "firends":[
         "cabbage",
         "radish",
         "carrot",
@@ -469,7 +469,7 @@
         "turnip",
         "cucurbita"
      ],
-     "antagonists":[
+     "foes":[
         "garlic",
         "onion",
         "shallot",
@@ -480,7 +480,7 @@
      "key":"chickpea",
      "name":"Pois chiche",
      "plantFamilies":"fabaceae",
-     "companions":[
+     "firends":[
         "cucumber"
      ]
   },
@@ -488,7 +488,7 @@
      "key":"pepper",
      "name":"Poivron",
      "plantFamilies":"solanaceae",
-     "companions":[
+     "firends":[
         "tomato",
         "eggplant"
      ]
@@ -497,13 +497,13 @@
      "key":"potato",
      "name":"Pomme de terre",
      "plantFamilies":"solanaceae",
-     "companions":[
+     "firends":[
         "cabbage",
         "pea",
         "bean",
         "celery"
      ],
-     "antagonists":[
+     "foes":[
         "tomato",
         "cucumber",
         "carrot",
@@ -515,7 +515,7 @@
      "key":"pumpkin",
      "name":"Potiron",
      "plantFamilies":"cucurbitaceae",
-     "companions":[
+     "firends":[
         "corn",
         "bean"
      ]
@@ -524,14 +524,14 @@
      "key":"radish",
      "name":"Radis",
      "plantFamilies":"brassicaceae",
-     "companions":[
+     "firends":[
         "carrot",
         "lettuce",
         "strawberry",
         "salad",
         "pea"
      ],
-     "antagonists":[
+     "foes":[
         "bean",
         "chervil"
      ]
@@ -545,7 +545,7 @@
      "key":"salsify",
      "name":"Salsifis",
      "plantFamilies":"asteraceae",
-     "companions":[
+     "firends":[
         "leek",
         "carrot"
      ]
@@ -554,7 +554,7 @@
      "key":"tomato",
      "name":"Tomate",
      "plantFamilies":"solanaceae",
-     "companions":[
+     "firends":[
         "garlic",
         "onion",
         "spinach",
@@ -566,7 +566,7 @@
         "basil",
         "marigold"
      ],
-     "antagonists":[
+     "foes":[
         "potato",
         "bean",
         "fennel",
@@ -576,7 +576,7 @@
   {
      "key":"cassis",
      "name":"Cassis",
-     "companions":[
+     "firends":[
         "pea",
         "strawberry",
         "marigold",
@@ -586,7 +586,7 @@
   {
      "key":"strawberry",
      "name":"Fraisier",
-     "companions":[
+     "firends":[
         "radish",
         "cornSalad",
         "bean",
@@ -598,21 +598,21 @@
         "spinach",
         "thyme"
      ],
-     "antagonists":[
+     "foes":[
         "cauliflower"
      ]
   },
   {
      "key":"raspberry",
      "name":"Framboise",
-     "companions":[
+     "firends":[
         "bean"
      ]
   },
   {
      "key":"Currant",
      "name":"Groseille",
-     "companions":[
+     "firends":[
         "bean",
         "pea"
      ]
@@ -620,7 +620,7 @@
   {
      "key":"dill",
      "name":"Aneth",
-     "companions":[
+     "firends":[
         "bean",
         "nasturtium"
      ]
@@ -628,14 +628,14 @@
   {
      "key":"basil",
      "name":"Basilic",
-     "companions":[
+     "firends":[
         "tomato"
      ]
   },
   {
      "key":"chervil",
      "name":"Cerfeuil",
-     "companions":[
+     "firends":[
         "scallion",
         "verbena"
      ]
@@ -643,7 +643,7 @@
   {
      "key":"chive",
      "name":"Ciboulette",
-     "companions":[
+     "firends":[
         "thym",
         "parsley",
         "marigold"
@@ -652,7 +652,7 @@
   {
      "key":"coriander",
      "name":"Coriandre",
-     "companions":[
+     "firends":[
         "basil",
         "borage"
      ]
@@ -660,7 +660,7 @@
   {
      "key":"tarragon",
      "name":"Estragon",
-     "companions":[
+     "firends":[
         "chive",
         "borage",
         "marigold"
@@ -669,7 +669,7 @@
   {
      "key":"melissa",
      "name":"Mélisse",
-     "companions":[
+     "firends":[
         "sorrel",
         "minth"
      ]
@@ -677,14 +677,14 @@
   {
      "key":"minth",
      "name":"Menthe",
-     "companions":[
+     "firends":[
         "chervil"
      ]
   },
   {
      "key":"parsley",
      "name":"Persil",
-     "companions":[
+     "firends":[
         "chive",
         "salad"
      ]
@@ -692,7 +692,7 @@
   {
      "key":"rosemary",
      "name":"Romarin",
-     "companions":[
+     "firends":[
         "fennel",
         "lavender",
         "thyme"
@@ -701,7 +701,7 @@
   {
      "key":"satureja",
      "name":"Sarriette",
-     "companions":[
+     "firends":[
         "thyme",
         "sage",
         "rosemary"
@@ -710,7 +710,7 @@
   {
      "key":"sage",
      "name":"Sauge",
-     "companions":[
+     "firends":[
         "cabbage",
         "thyme",
         "Sarriette"
@@ -719,7 +719,7 @@
   {
      "key":"thyme",
      "name":"Thym",
-     "companions":[
+     "firends":[
         "Ciboulette",
         "sage",
         "Sarriette"
