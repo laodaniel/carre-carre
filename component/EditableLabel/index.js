@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from 'preact/hooks';
+import Edit from 'asset/icon/Edit';
+import styles from './styles.module.css';
 
 const EditableLabel = ({ label, className, onChange = () => {} }) => {
   const [isEditing, setEditing] = useState(false);
@@ -41,6 +43,7 @@ const EditableLabel = ({ label, className, onChange = () => {} }) => {
     <div className={className}>
       {isEditing
         ? <input
+            className={styles.editInput}
             ref={inputRef}
             type='text'
             onChange={onChangeHandler}
@@ -49,7 +52,10 @@ const EditableLabel = ({ label, className, onChange = () => {} }) => {
             onFocus={onFocusHandler}
             value={text}
           />
-        : <span onClick={onClickHandler}>{text}</span>
+        : <>
+            <Edit className={styles.editIcon} />
+            <span onClick={onClickHandler}>{text}</span>
+          </>
       }
     </div>
   );

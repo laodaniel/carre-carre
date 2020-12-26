@@ -9,8 +9,10 @@ import './index.css';
 const App = () => (
   <AppContextProvider>
     <Header />
-    <Plot />
-    <Card />
+    <main>
+      <Plot />
+      <Card />
+    </main>
   </AppContextProvider>
 );
 

@@ -17,7 +17,7 @@ const Plot = () => {
   };
 
   return (
-    <main className={styles.plot} style={plotStyle}>
+    <section className={styles.plot} style={plotStyle}>
       {plants.map(({ key }, index) => (
         <div
           data-key={key}
@@ -29,7 +29,7 @@ const Plot = () => {
           {key && <Plant id={key} />}
         </div>
       ))}
-    </main>
+    </section>
   )
 };
 

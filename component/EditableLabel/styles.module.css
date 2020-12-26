@@ -1,0 +1,10 @@
+.editIcon {
+  width: 16px;
+  height: 16px;
+  padding: 0 8px;
+  fill: grey;
+}
+
+.editInput {
+  margin-left: 32px;
+}

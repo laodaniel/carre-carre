@@ -1,0 +1,11 @@
+.card {
+  width: calc(50% - 96px);
+  background-color: var(--background-color);
+  padding: 16px;
+}
+
+@media (max-width: 750px) {
+  .card {
+    width: 100%;
+  }
+}

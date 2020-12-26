@@ -1,9 +1,14 @@
 .plot {
   display: grid;
-  width: 60%;
+  width: calc(50% - 96px);
   max-width: calc(90vh - var(--header-height));
   grid-gap: 16px;
-  margin: auto;
+}
+
+@media (max-width: 750px) {
+  .plot {
+    width: 100%;
+  }
 }
 
 .slot {

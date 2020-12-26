@@ -1,4 +1,4 @@
-import I18nIcon from 'asset/I18nIcon';
+import I18nIcon from 'asset/icon/I18n';
 import styles from './styles.module.css';
 import { getLanguage } from 'i18n/useI18n';
 
