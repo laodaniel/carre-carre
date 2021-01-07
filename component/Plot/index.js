@@ -1,5 +1,6 @@
 import { useContext } from 'preact/hooks';
 import AppContext from 'context/AppContext';
+import Icon from 'component/Icon';
 import Plant from 'component/Plant';
 import styles from './styles.module.css';
 
@@ -26,7 +27,9 @@ const Plot = () => {
           className={styles.slot}
           onClick={onClickHandler}
         >
-          {key && <Plant id={key} />}
+          {key
+            ? <Plant id={key} />
+            : <Icon name="add" className={styles.add} />}
         </div>
       ))}
     </section>

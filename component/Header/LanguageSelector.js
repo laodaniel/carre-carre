@@ -1,4 +1,4 @@
-import I18nIcon from 'asset/icon/I18n';
+import Icon from 'component/Icon';
 import styles from './styles.module.css';
 import { getLanguage } from 'i18n/useI18n';
 
@@ -8,7 +8,7 @@ const buildLink = ([ lang, label ]) => getLanguage() === lang
 
 const LanguageSelector = () => (
   <div className={styles.languageSelector}>
-    <I18nIcon />
+    <Icon name="i18n" className={styles.icon} />
     {Object.entries({ fr: 'Français', en: 'English'}).map(([ lang, label ]) => buildLink([ lang, label ]))}
   </div>
 );

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'preact/hooks';
-import Edit from 'asset/icon/Edit';
+import Icon from 'component/Icon';
 import styles from './styles.module.css';
 
 const EditableLabel = ({ label, className, onChange = () => {} }) => {
@@ -53,7 +53,7 @@ const EditableLabel = ({ label, className, onChange = () => {} }) => {
             value={text}
           />
         : <>
-            <Edit className={styles.editIcon} />
+            <Icon name="edit" className={styles.editIcon} />
             <span onClick={onClickHandler}>{text}</span>
           </>
       }

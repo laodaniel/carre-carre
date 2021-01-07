@@ -48,8 +48,9 @@ header {
   align-items: center;
 }
 
-.languageSelector svg {
+.icon {
   width: 32px;
+  height: 32px;
   fill: white;
   padding-right: 8px;
 }
